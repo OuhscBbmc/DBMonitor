@@ -46,83 +46,90 @@ rm(tokenRoster, rawCsvText)
 ## Groom dsRoster
 dsRoster$server_type <- factor(dsRoster$server_type, levels=1, labels=c("SQL Server"))
 
+#############################
+### Query REDCap to get the largest record_id value
+#############################
+rawCsvText <- RCurl::postForm(
+  uri=redcapUri, 
+  token=tokenLog,
+  content='record',
+  format='csv', 
+  type='flat', 
+  fields=c("record_id"), 
+  .opts=curlOptions(ssl.verifypeer=FALSE)
+)
+# head(rawCsvText) #Inspect the raw data, if desired.
+dsRecordIDs <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
+maxRecordID <- max(as.integer(dsRecordIDs$record_id))
+object.size(dsRecordIDs)
+
+rm(dsRecordIDs, rawCsvText)
 
 #############################
-### Retrieve token and REDCap URL
+### Retrieve Row Counts from the databases
 #############################
-
-
-# sql <- "SELECT sysobjects.Name, sysindexes.Rows FROM sysobjects INNER JOIN sysindexes ON sysobjects.id = sysindexes.id WHERE type = 'U'AND sysindexes.IndId < 2"
 sql <- "SELECT SCHEMA_NAME(A.schema_id) + '.' + A.Name as [table], SUM(B.rows) AS 'row_count' FROM sys.objects A INNER JOIN sys.partitions B ON A.object_id = B.object_id WHERE A.type = 'U' GROUP BY A.schema_id, A.Name"
-# listOfDs <- list()
 dsBig <- NULL
 for( i in seq_len(nrow(dsRoster)) ) {
   channel <- RODBC::odbcConnect(dsRoster[i, 'dsn']) 
-#   RODBC::getSqlTypeInfo("Microsoft SQL Server") 
   RODBC::odbcGetInfo(channel)
 #   tableList <- RODBC::sqlTables(channel, catalog=dsRoster[i, 'database'], tableType="TABLE")
   
   stopifnot(dsRoster[i, 'dsn'] != "SQL Server" ) #Currently, only SQL Server is supported
-  #sql_specific <- paste("USE", dsRoster[i, 'database'], " ", sql)  
   RODBC::sqlQuery(channel, paste("USE", dsRoster[i, 'database']))
   dsRows <- RODBC::sqlQuery(channel, sql)
   RODBC::odbcClose(channel)
   
   dsRows$probe_date <- Sys.time()
   dsRows$database <-  dsRoster[i, 'database']
-  #listOfDs <- c(listOfDs, dsRows)
   dsBig <- rbind(dsBig, dsRows)
   rm(channel, dsRows)  
 }
 
-# dsAllRows <- plyr::join_all()
-dsBig <- dsBig[, c("database", "table", "probe_date", "row_count")] #"record_id", 
+dsBig$record_id <- seq_len(nrow(dsBig)) + maxRecordID
+# dsBig$record_id <- ""
+dsBig <- dsBig[, c("record_id", "database", "table", "probe_date", "row_count")] #"record_id", 
 #csvBig <- write.csv(dsBig)
 # con <- textConnection()
 # csvAllRos <- readLines()
 
-# a <- ""
-# write.csv(dsBig, file=a)
+t <- tempfile()
+write.csv(dsBig[, ], file=t, quote=F, row.names=F)
+csvElements <- readLines(con=t )[]
+unlink(t)
+csv <- paste(csvElements, collapse="\n")
+csv
+rm(dsBig)
 
-# t <- tempfile()
-# write.csv(dsBig[1, ], file=t, quote=F, row.names=T)
-# csv <- readLines(con=t )[1:3]
-# unlink(t)
-# 
-# xml <- "
-# <?xml version=\"1.0\" encoding=\"UTF-8\" ?>
-# <records> 
-#   <item>
-#     <record_id>1</record_id>
-#     <database>Tfcbt</database>
-#     <table>dbo.dtproperties</table>
-#     <probe_date>2013-08-29 23:37:18</probe_date>
-#     <row_count>0/row_count>
-#   </item> 
-# </records>
-# "
-#   
-# 
-# #############################
-# ### Write to REDCap with API
-# #############################
-# #Call REDCap
-# m <- RCurl::postForm(
-#   uri=redcapUri, 
-#   token=tokenLog,
-#   content='record',
-#   format='xml', 
-#   type='flat', 
-#   overwriteBehavior='normal',
-#   data=xml,
-#   .opts=curlOptions(ssl.verifypeer=FALSE)
-# )
-# 
-# 
-# # head(rawCsvText) #Inspect the raw data, if desired.
-# ds <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
-# ds$RowID <- as.integer(row.names(ds))
-# object.size(ds)
-# 
-# rm(redcapUri, tokenLog, rawCsvText)
-# 
+#############################
+### Write to REDCap with API
+#############################
+recordsAffected <- RCurl::postForm(
+  uri=redcapUri, 
+  token=tokenLog,
+  content='record',
+  format='csv', 
+  type='flat', 
+  overwriteBehavior='normal',
+  data=csv,
+  .opts=curlOptions(ssl.verifypeer=FALSE)
+)
+print(paste("Records written & updated to REDCap:", as.integer(recordsAffected)))
+
+#############################
+### Read from REDCap  if you want to verify
+#############################
+rawCsvText <- RCurl::postForm(
+  uri=redcapUri, 
+  token=tokenLog,
+  content='record',
+  format='csv', 
+  type='flat', 
+  .opts=curlOptions(ssl.verifypeer=FALSE)
+)
+# head(rawCsvText) #Inspect the raw data, if desired.
+dsRecordIDs <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
+# maxRecordID <- max(as.integer(dsRecordIDs$record_id))
+object.size(dsRecordIDs)
+
+rm(dsRecordIDs, rawCsvText)
