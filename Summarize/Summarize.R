@@ -70,26 +70,26 @@ rm(dsRecordIDs, rawCsvText)
 #############################
 #http://stackoverflow.com/questions/2221555/how-to-fetch-the-row-count-for-all-tables-in-a-sql-server-database
 sql <- "SELECT SCHEMA_NAME(A.schema_id) + '.' + A.Name as [table], SUM(B.rows) AS 'row_count' FROM sys.objects A INNER JOIN sys.partitions B ON A.object_id = B.object_id WHERE A.type = 'U' GROUP BY A.schema_id, A.Name"
-dsRowsAll <- NULL
+dsRow <- NULL
 for( i in seq_len(nrow(dsRoster)) ) {
   channel <- RODBC::odbcConnect(dsRoster[i, 'dsn']) 
   RODBC::odbcGetInfo(channel)
-#   tableList <- RODBC::sqlTables(channel, catalog=dsRoster[i, 'database'], tableType="TABLE")
+#   dsTableList <- RODBC::sqlTables(channel, catalog=dsRoster[i, 'database'], tableType="TABLE")
   
   stopifnot(dsRoster[i, 'dsn'] != "SQL Server" ) #Currently, only SQL Server is supported
   RODBC::sqlQuery(channel, paste("USE", dsRoster[i, 'database']))
-  dsRows <- RODBC::sqlQuery(channel, sql)
+  dsRowCountInDatabase <- RODBC::sqlQuery(channel, sql)
   RODBC::odbcClose(channel)
   
-  dsRows$probe_date <- Sys.time()
-  dsRows$database <-  dsRoster[i, 'database']
-  dsRowsAll <- rbind(dsRowsAll, dsRows)
-  rm(channel, dsRows)  
+  dsRowCountInDatabase$probe_date <- Sys.time()
+  dsRowCountInDatabase$database <-  dsRoster[i, 'database']
+  dsRow <- rbind(dsRow, dsRowCountInDatabase)
+  rm(channel, dsRowCountInDatabase)  
 }
 rm(dsRoster, sql, i)
 
-dsRowsAll$record_id <- seq_len(nrow(dsRowsAll)) + maxRecordID
-dsRowsAll <- dsRowsAll[, c("record_id", "database", "table", "probe_date", "row_count")] #"record_id", 
+dsRow$record_id <- seq_len(nrow(dsRow)) + maxRecordID
+dsRow <- dsRow[, c("record_id", "database", "table", "probe_date", "row_count")] #"record_id", 
 
 #Approach #1 for converting to csv elements
 # t <- tempfile()
@@ -100,11 +100,11 @@ dsRowsAll <- dsRowsAll[, c("record_id", "database", "table", "probe_date", "row_
 #Approach #2 for converting to csv elements
 # http://comments.gmane.org/gmane.comp.lang.r.general/274735
 # http://stackoverflow.com/questions/12393004/parsing-back-to-messy-api-strcuture/12435389#12435389
-write.csv(dsRowsAll, textConnection('csvElements', 'w'), row.names = FALSE)
+write.csv(dsRow, textConnection('csvElements', 'w'), row.names = FALSE)
 
 #Convert vector of csv elements to one long CSV string
 csv <- paste(csvElements, collapse="\n")
-rm(dsRowsAll, csvElements, maxRecordID)
+rm(dsRow, csvElements, maxRecordID)
 
 #############################
 ### Write to REDCap with API
@@ -136,6 +136,5 @@ rm(csv, recordsAffected)
 # dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
 # object.size(dsLog)
 # rm(dsLog, rawCsvText, redcapUri)
-rm(tokenLog)
 
-rm(dsRecordIDs, rawCsvText, redcapUri)
+rm(tokenLog)
