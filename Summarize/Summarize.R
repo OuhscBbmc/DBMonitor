@@ -68,8 +68,9 @@ rm(dsRecordIDs, rawCsvText)
 #############################
 ### Retrieve Row Counts from the databases
 #############################
+#http://stackoverflow.com/questions/2221555/how-to-fetch-the-row-count-for-all-tables-in-a-sql-server-database
 sql <- "SELECT SCHEMA_NAME(A.schema_id) + '.' + A.Name as [table], SUM(B.rows) AS 'row_count' FROM sys.objects A INNER JOIN sys.partitions B ON A.object_id = B.object_id WHERE A.type = 'U' GROUP BY A.schema_id, A.Name"
-dsBig <- NULL
+dsRowsAll <- NULL
 for( i in seq_len(nrow(dsRoster)) ) {
   channel <- RODBC::odbcConnect(dsRoster[i, 'dsn']) 
   RODBC::odbcGetInfo(channel)
@@ -82,24 +83,28 @@ for( i in seq_len(nrow(dsRoster)) ) {
   
   dsRows$probe_date <- Sys.time()
   dsRows$database <-  dsRoster[i, 'database']
-  dsBig <- rbind(dsBig, dsRows)
+  dsRowsAll <- rbind(dsRowsAll, dsRows)
   rm(channel, dsRows)  
 }
+rm(dsRoster, sql, i)
 
-dsBig$record_id <- seq_len(nrow(dsBig)) + maxRecordID
-# dsBig$record_id <- ""
-dsBig <- dsBig[, c("record_id", "database", "table", "probe_date", "row_count")] #"record_id", 
-#csvBig <- write.csv(dsBig)
-# con <- textConnection()
-# csvAllRos <- readLines()
+dsRowsAll$record_id <- seq_len(nrow(dsRowsAll)) + maxRecordID
+dsRowsAll <- dsRowsAll[, c("record_id", "database", "table", "probe_date", "row_count")] #"record_id", 
 
-t <- tempfile()
-write.csv(dsBig[, ], file=t, quote=F, row.names=F)
-csvElements <- readLines(con=t )[]
-unlink(t)
+#Approach #1 for converting to csv elements
+# t <- tempfile()
+# write.csv(dsBig[, ], file=t, quote=F, row.names=F)
+# csvElements <- readLines(con=t )[]
+# unlink(t)
+
+#Approach #2 for converting to csv elements
+# http://comments.gmane.org/gmane.comp.lang.r.general/274735
+# http://stackoverflow.com/questions/12393004/parsing-back-to-messy-api-strcuture/12435389#12435389
+write.csv(dsRowsAll, textConnection('csvElements', 'w'), row.names = FALSE)
+
+#Convert vector of csv elements to one long CSV string
 csv <- paste(csvElements, collapse="\n")
-csv
-rm(dsBig)
+rm(dsRowsAll, csvElements, maxRecordID)
 
 #############################
 ### Write to REDCap with API
@@ -114,22 +119,23 @@ recordsAffected <- RCurl::postForm(
   data=csv,
   .opts=curlOptions(ssl.verifypeer=FALSE)
 )
-print(paste("Records written & updated to REDCap:", as.integer(recordsAffected)))
-
+message(paste("Records written & updated to REDCap:", as.integer(recordsAffected)))
+rm(csv, recordsAffected)
 #############################
 ### Read from REDCap  if you want to verify
 #############################
-rawCsvText <- RCurl::postForm(
-  uri=redcapUri, 
-  token=tokenLog,
-  content='record',
-  format='csv', 
-  type='flat', 
-  .opts=curlOptions(ssl.verifypeer=FALSE)
-)
-# head(rawCsvText) #Inspect the raw data, if desired.
-dsRecordIDs <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
-# maxRecordID <- max(as.integer(dsRecordIDs$record_id))
-object.size(dsRecordIDs)
+# rawCsvText <- RCurl::postForm(
+#   uri=redcapUri, 
+#   token=tokenLog,
+#   content='record',
+#   format='csv', 
+#   type='flat', 
+#   .opts=curlOptions(ssl.verifypeer=FALSE)
+# )
+# # head(rawCsvText) #Inspect the raw data, if desired.
+# dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
+# object.size(dsLog)
+# rm(dsLog, rawCsvText, redcapUri)
+rm(tokenLog)
 
-rm(dsRecordIDs, rawCsvText)
+rm(dsRecordIDs, rawCsvText, redcapUri)
