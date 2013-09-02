@@ -91,11 +91,11 @@ rm(dsRoster, sql, i)
 dsRow$record_id <- seq_len(nrow(dsRow)) + maxRecordID
 dsRow <- dsRow[, c("record_id", "database", "table", "probe_date", "row_count")] #"record_id", 
 
-#Approach #1 for converting to csv elements
-# t <- tempfile()
-# write.csv(dsBig[, ], file=t, quote=F, row.names=F)
-# csvElements <- readLines(con=t )[]
-# unlink(t)
+# #Approach #1 for converting to csv elements
+# tempFile <- tempfile() #Let R determine a good location for a temporary file.
+# write.csv(dsRow[, ], file=tempFile, quote=F, row.names=F) #Write to the temporary file
+# csvElements <- readLines(con=tempFile) #Read from rhe temporary file into a character vector.
+# unlink(tempFile) #Delete the temporary file.
 
 # Approach #2 for converting to csv elements
 #   This next line converts the data.frame into a character vector.  Each element represents one record.
