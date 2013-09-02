@@ -97,12 +97,14 @@ dsRow <- dsRow[, c("record_id", "database", "table", "probe_date", "row_count")]
 # csvElements <- readLines(con=t )[]
 # unlink(t)
 
-#Approach #2 for converting to csv elements
-# http://comments.gmane.org/gmane.comp.lang.r.general/274735
-# http://stackoverflow.com/questions/12393004/parsing-back-to-messy-api-strcuture/12435389#12435389
+# Approach #2 for converting to csv elements
+#   This next line converts the data.frame into a character vector.  Each element represents one record.
+#   The 'textConnection()' call dumps the character vector into a variable called 'csvElements'
+#   Also see: http://comments.gmane.org/gmane.comp.lang.r.general/274735
+#   Also see: http://stackoverflow.com/questions/12393004/parsing-back-to-messy-api-strcuture/12435389#12435389
 write.csv(dsRow, textConnection('csvElements', 'w'), row.names = FALSE)
 
-#Convert vector of csv elements to one long CSV string
+#Convert the vector of csv elements to one long CSV string
 csv <- paste(csvElements, collapse="\n")
 rm(dsRow, csvElements, maxRecordID)
 
@@ -119,7 +121,7 @@ recordsAffected <- RCurl::postForm(
   data=csv,
   .opts=curlOptions(ssl.verifypeer=FALSE)
 )
-message(paste("Records written & updated to REDCap:", as.integer(recordsAffected)))
+message(paste("Count of records written & updated to REDCap:", as.integer(recordsAffected)))
 rm(csv, recordsAffected)
 #############################
 ### Read from REDCap  if you want to verify
