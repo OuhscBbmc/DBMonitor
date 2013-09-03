@@ -117,7 +117,7 @@ recordsAffected <- RCurl::postForm(
   content='record',
   format='csv', 
   type='flat', 
-  overwriteBehavior='normal',
+  overwriteBehavior='normal', #overwriteBehavior: *normal* - blank/empty values will be ignored [default]; *overwrite* - blank/empty values are valid and will overwrite data
   data=csv,
   .opts=curlOptions(ssl.verifypeer=FALSE)
 )

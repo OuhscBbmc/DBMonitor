@@ -2,17 +2,16 @@ rm(list=ls(all=TRUE))  #Clear the variables from previous runs.  UNcomment this 
 require(RCurl, quietly=TRUE)
 require(plyr, quietly=TRUE)
 # require(reshape2, quietly=TRUE)
-require(lubridate, quietly=TRUE)
-require(stringr, quietly=TRUE)
+# require(lubridate, quietly=TRUE)
+# require(stringr, quietly=TRUE)
 require(RODBC, quietly=TRUE)
 
 #############################
 ### Global Declarations & Functions
 #############################
-# databaseNames <- c("Tfcbt")
-# dsRoster <- data.frame(Database=NA_character_, DsnName=NA_character_, BackupPath=NA_character_, stringsAsFactors=F)
-# dsRoster[1, ] <- c("Tfcbt", "PedsISDB", "")
+compressionExtension <- ".gzip"
 sqlServerTablesToExclude <- c("dtproperties", "sysdiagrams")
+
 
 #############################
 ### Retrieve token and REDCap URL
@@ -74,9 +73,12 @@ dsTableName <- plyr::rename(dsTableName, replace=c(
 ))
 dsTableName$type <- NULL #This always be table, when RODBC::sqlTables is passed " tableType="TABLE" "
 dsTableName$remarks <- NULL #Unlikely to ever be used in this application
-dsTableName$table <- paste0(dsTableName$database, ".", dsTableName$schema, ".", dsTableName$table_core)
+#dsTableName$table <- paste0(dsTableName$database, ".", dsTableName$schema, ".", dsTableName$table_core)
+dsTableName$table <- paste0(dsTableName$schema, ".", dsTableName$table_core)
 
 dsRosterAndTable <- plyr::join(x=dsRoster, y=dsTableName, by="database", type="left", match="all")
+dsRosterAndTable$table_safe <- gsub(pattern="\\.", replacement="_", x=dsRosterAndTable$table)
+dsRosterAndTable$backup_path <- paste0(file.path(dsRosterAndTable$backup_path, dsRosterAndTable$table_safe), ".csv", compressionExtension)
 
 #############################
 ### Create a directory for each database's backups
@@ -88,21 +90,18 @@ for( i in seq_len(nrow(dsRoster)) ) {
 #############################
 ### Backup each table
 #############################
-# for( i in seq_len(nrow(dsRosterAndTable)) ) {
-# #   prefix <- strftime(x=Sys.time(), format="%Y-%m-%d_%H-%M-%S")
-#   
-#   channel <- RODBC::odbcConnect(dsRosterAndTable[i, 'dsn']) #RODBC::odbcGetInfo(channel)
-#   dsJunk <- RODBC::sqlFetch(channel, sqtable=dsRosterAndTable[i, 'table'])
-#   
-#   dsFresh <- RODBC::sqlFetch(channel, sqtable=dsRosterAndTable[i, 'table'])
-#   
-# #   dsFresh <- RODBC::sqlFetch(channel, sqtable=dsRosterAndTable[i, 'table_core'], stringsAsFactors=F)
-#   RODBC::odbcClose(channel)
-#   
-# #   write.csv(dsFresh, file=gzfile())
-#   
-# #   rm(channel, dsTableInDatabase)  
-# }
-# # rm(i)
-# 
-# 
+for( i in seq_len(nrow(dsRosterAndTable)) ) {
+  cnnString <- paste0("driver={SQL Server};server=", dsRosterAndTable[i, 'server'], ";database=", dsRosterAndTable[i, 'database'], ";trusted_connection=true")
+  channel <- RODBC::odbcDriverConnect(cnnString) #RODBC::odbcGetInfo(channel)
+  
+  dsFresh <- RODBC::sqlFetch(channel, sqtable=dsRosterAndTable[i, 'table'], stringsAsFactors=F)
+  RODBC::odbcClose(channel)
+  
+  write.csv(dsFresh, file=gzfile(dsRosterAndTable$backup_path[i]))
+  
+  rm(channel, dsFresh)  
+}
+rm(i)
+
+
+
