@@ -1,0 +1,50 @@
+<!-- Specify the report's official name, goal & description. -->
+# Row Counts
+**Report Description**: This report helps monitor the activity and (partial) health of the databases.
+
+<!-- Point knitr to the underlying code file so it knows where to look for the chunks. -->
+```{r, echo=FALSE, message=F}
+opts_chunk$set(fig.width=12, fig.height=3, fig.path='FigureRmd/')#, dpi=400)
+# opts_chunk$set(cache=T, autodep=T)
+# dep_prev()
+               
+require(xtable)
+require(scales)
+pathSourceCode <- file.path(getwd(), "RowCountHistory.R")
+read_chunk(pathSourceCode) 
+```
+
+<!-- Load the packages.  Suppress the output when loading packages. --> 
+```{r LoadPackages, echo=FALSE, message=FALSE}
+```
+
+<!-- Load any Global Functions declared in the R file.  Suppress the output. --> 
+```{r DeclareGlobalFunctions, echo=FALSE, message=FALSE}
+```
+
+<!-- Declare any global functions specific to a Rmd output.  Suppress the output. --> 
+```{r, echo=FALSE, message=FALSE}
+PrintTable <- function( dsTable ) {
+  print(xtable(dsTable), type="html")
+}
+```
+<!-- Load the dataset.   -->
+```{r LoadDS, echo=F, results='hide', message=F}
+```
+<!-- Tweak the dataset.   -->
+```{r TweakDS, echo=F, results='hide', message=F}
+```
+
+```{r ReportParameters, echo=FALSE}
+# print(dirname(getwd()))
+cat(paste0("This report covers records between ", min(dsLog$probe_date, na.rm=T), " and ",  max(dsLog$probe_date, na.rm=T), "."))
+cat(paste0("This report contains information from ", comma(length(unique(dsLog$database))), " databases, ", comma(length(unique(dsLog$table))), " tables, and ", nrow(dsLog), " records."))
+
+```
+
+## Tables
+The history of each table is shown in a line graph.  The text above each line is the change since the last measurement.
+
+
+```{r RowCount, echo=FALSE}
+```

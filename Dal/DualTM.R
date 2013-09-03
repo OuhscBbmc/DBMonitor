@@ -44,7 +44,7 @@ object.size(dsRoster)
 dsRoster$server_type <- factor(dsRoster$server_type, levels=c(1), labels=c("SQL Server"))
 dsRoster$should_backup <- as.logical(dsRoster$should_backup)
 dsRoster$monitor_row_count <- as.logical(dsRoster$monitor_row_count)
-# dsRoster$characteristics_complete <- as.logical(dsRoster$characteristics_complete)
+dsRoster$characteristics_complete <- NULL
 
 rm(tokenRoster, rawCsvText)
 #############################
@@ -66,5 +66,6 @@ dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text
 
 ## Groom some variables
 dsLog$probe_date <- as.POSIXct(dsLog$probe_date, tz="") #Zero-length character specifies the current time zone.
+dsLog$database_monitor_complete <- NULL
 
 rm(tokenLog, rawCsvText, redcapUri)
