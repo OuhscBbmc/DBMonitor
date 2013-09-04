@@ -5,8 +5,7 @@
 <!-- Point knitr to the underlying code file so it knows where to look for the chunks. -->
 ```{r, echo=FALSE, message=F}
 opts_chunk$set(fig.width=12, fig.height=3, fig.path='FigureRmd/')#, dpi=400)
-# opts_chunk$set(cache=T, autodep=T)
-# dep_prev()
+options(width=120)
                
 require(xtable)
 require(scales)
@@ -37,14 +36,21 @@ PrintTable <- function( dsTable ) {
 
 ```{r ReportParameters, echo=FALSE}
 # print(dirname(getwd()))
-cat(paste0("This report covers records between ", min(dsLog$probe_date, na.rm=T), " and ",  max(dsLog$probe_date, na.rm=T), "."))
-cat(paste0("This report contains information from ", comma(length(unique(dsLog$database))), " databases, ", comma(length(unique(dsLog$table))), " tables, and ", nrow(dsLog), " records."))
+cat(paste0("This report covers records between ", min(dsLog$probe_date, na.rm=T), " and ",  max(dsLog$probe_date, na.rm=T), ".\n",
+  "This report contains information from ", 
+           comma(length(unique(dsLog$database))), " databases, ", 
+           comma(length(unique(dsLog$table))), " tables, and ", 
+           comma(nrow(dsLog)), " records."))
 
 ```
 
-## Tables
-The history of each table is shown in a line graph.  The text above each line is the change since the last measurement.
+## Row Count of Each Table of Each Database
+The table displays the number of records in each table, and how that count has increased or decreased since the last occasion the table was probed.
 
+Below the table are line graphs that show the history of each database table.  The text above each line is the change since the last probe.
 
-```{r RowCount, echo=FALSE}
+```{r RowCountTable, echo=FALSE}
+```
+
+```{r RowCountGraph, echo=FALSE, results='asis'}
 ```

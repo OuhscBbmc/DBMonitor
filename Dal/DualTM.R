@@ -69,3 +69,16 @@ dsLog$probe_date <- as.POSIXct(dsLog$probe_date, tz="") #Zero-length character s
 dsLog$database_monitor_complete <- NULL
 
 rm(tokenLog, rawCsvText, redcapUri)
+
+#############################
+### Exclude the undesired tables
+#############################
+tablesToExclude <- character(0)
+
+for( i in seq_len(nrow(dsRoster)) ) {
+  sqlServerTablesToExclude <- unlist(strsplit(dsRoster$tables_to_ignore[i],  ";"))
+  tablesToExclude <- c(tablesToExclude, paste0(dsRoster$database[i], ".", sqlServerTablesToExclude))
+  rm(sqlServerTablesToExclude)
+}
+dsLog <- dsLog[!(paste0(dsLog$database, ".", dsLog$table) %in% tablesToExclude), ]
+rm(tablesToExclude, i)

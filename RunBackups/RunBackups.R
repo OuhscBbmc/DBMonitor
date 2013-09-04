@@ -10,7 +10,7 @@ require(RODBC, quietly=TRUE)
 ### Global Declarations & Functions
 #############################
 compressionExtension <- ".gzip"
-sqlServerTablesToExclude <- c("dtproperties", "sysdiagrams")
+# sqlServerTablesToExclude <- c("dtproperties", "sysdiagrams")
 
 
 #############################
@@ -57,24 +57,26 @@ for( i in seq_len(nrow(dsRoster)) ) {
   dsTableNameInDatabase <- RODBC::sqlTables(channel, catalog=dsRoster[i, 'database'], tableType="TABLE")
   RODBC::odbcClose(channel)
   
-  dsTableNameInDatabase <- dsTableNameInDatabase[!(dsTableNameInDatabase$TABLE_NAME %in% sqlServerTablesToExclude), ]
+  dsTableNameInDatabase$type <- NULL #This always be table, when RODBC::sqlTables is passed " tableType="TABLE" "
+  dsTableNameInDatabase$remarks <- NULL #Unlikely to ever be used in this application
+  
+  sqlServerTablesToExclude <- unlist(strsplit(dsRoster$tables_to_ignore[i],  ";"))
+  dsTableNameInDatabase$table <- paste0(dsTableNameInDatabase$TABLE_SCHEM, ".", dsTableNameInDatabase$TABLE_NAME)  
+  dsTableNameInDatabase <- dsTableNameInDatabase[!(dsTableNameInDatabase$table %in% sqlServerTablesToExclude), ]
+  
   dsTableName <- rbind(dsTableName, dsTableNameInDatabase)
   
-  rm(channel, dsTableNameInDatabase)  
+  rm(channel, dsTableNameInDatabase, sqlServerTablesToExclude)  
 }
 rm(i)
 
 dsTableName <- plyr::rename(dsTableName, replace=c(
   "TABLE_CAT"="database", 
   "TABLE_SCHEM"="schema", 
-  "TABLE_NAME"="table_core", 
-  "TABLE_TYPE"="type", 
-  "REMARKS"="remarks"
+  "TABLE_NAME"="table_core"#, 
+#   "TABLE_TYPE"="type", 
+#   "REMARKS"="remarks"
 ))
-dsTableName$type <- NULL #This always be table, when RODBC::sqlTables is passed " tableType="TABLE" "
-dsTableName$remarks <- NULL #Unlikely to ever be used in this application
-#dsTableName$table <- paste0(dsTableName$database, ".", dsTableName$schema, ".", dsTableName$table_core)
-dsTableName$table <- paste0(dsTableName$schema, ".", dsTableName$table_core)
 
 dsRosterAndTable <- plyr::join(x=dsRoster, y=dsTableName, by="database", type="left", match="all")
 dsRosterAndTable$table_safe <- gsub(pattern="\\.", replacement="_", x=dsRosterAndTable$table)
@@ -102,6 +104,3 @@ for( i in seq_len(nrow(dsRosterAndTable)) ) {
   rm(channel, dsFresh)  
 }
 rm(i)
-
-
-

@@ -10,8 +10,8 @@ require(RODBC, quietly=TRUE)
 ### Global Declarations & Functions
 #############################
 # databaseNames <- c("Tfcbt")
-dsRoster <- data.frame(Database=NA_character_, DsnName=NA_character_, BackupPath=NA_character_, stringsAsFactors=F)
-dsRoster[1, ] <- c("Tfcbt", "PedsISDB", "")
+# dsRoster <- data.frame(Database=NA_character_, DsnName=NA_character_, BackupPath=NA_character_, stringsAsFactors=F)
+# dsRoster[1, ] <- c("Tfcbt", "PedsISDB", "")
 
 #############################
 ### Retrieve token and REDCap URL
@@ -83,8 +83,12 @@ for( i in seq_len(nrow(dsRoster)) ) {
   
   dsRowCountInDatabase$probe_date <- Sys.time()
   dsRowCountInDatabase$database <-  dsRoster[i, 'database']
+  
+  sqlServerTablesToExclude <- unlist(strsplit(dsRoster$tables_to_ignore[i],  ";"))
+  dsRowCountInDatabase <- dsRowCountInDatabase[!(dsRowCountInDatabase$table %in% sqlServerTablesToExclude), ]
+  
   dsRow <- rbind(dsRow, dsRowCountInDatabase)
-  rm(channel, dsRowCountInDatabase)  
+#   rm(channel, dsRowCountInDatabase)  
 }
 rm(dsRoster, sql, i)
 
