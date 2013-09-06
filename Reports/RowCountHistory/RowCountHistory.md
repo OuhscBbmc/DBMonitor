@@ -26,8 +26,8 @@
 
 
 ```
-## This report covers records between 2013-08-30 00:30:28 and 2013-09-04 13:44:18.
-## This report contains information from 1 databases, 18 tables, and 324 records.
+## This report covers records between 2013-08-30 00:30:28 and 2013-09-06 11:30:40.
+## This report contains information from 1 databases, 37 tables, and 415 records.
 ```
 
 
@@ -39,27 +39,50 @@ Below the table are line graphs that show the history of each database table.  T
 
 ```
 ##    database                        table          probe_date row_count time_gap_in_hours change_pretty
-## 1     Tfcbt                dbo.tblAgency 2013-09-04 13:44:18       255             2.067             0
-## 2     Tfcbt        dbo.tblAgencyLocation 2013-09-04 13:44:18       202             2.067             0
-## 3     Tfcbt             dbo.tblCallGroup 2013-09-04 13:44:18        29             2.067             0
-## 4     Tfcbt      dbo.tblCallGroupMeeting 2013-09-04 13:44:18       169             2.067             0
-## 5     Tfcbt                  dbo.tblEval 2013-09-04 13:44:18         0             2.067             0
-## 6     Tfcbt  dbo.tblImplementationSurvey 2013-09-04 13:44:18         0             2.067             0
-## 7     Tfcbt             dbo.tblLUDecided 2013-09-04 13:44:18         3             2.067             0
-## 8     Tfcbt              dbo.tblLUGender 2013-09-04 13:44:18         3             2.067             0
-## 9     Tfcbt              dbo.tblLUSource 2013-09-04 13:44:18         5             2.067             0
-## 10    Tfcbt        dbo.tblLUTrainingType 2013-09-04 13:44:18        30             2.067             0
-## 11    Tfcbt             dbo.tblPresenter 2013-09-04 13:44:18        18             2.067             0
-## 12    Tfcbt               dbo.tblSession 2013-09-04 13:44:18         8             2.067             0
-## 13    Tfcbt             dbo.tblTherapist 2013-09-04 13:44:18       735             2.067           +45
-## 14    Tfcbt         dbo.tblTherapistEval 2013-09-04 13:44:18         0             2.067             0
-## 15    Tfcbt dbo.tblTherapistGroupMeeting 2013-09-04 13:44:18         0             2.067             0
-## 16    Tfcbt     dbo.tblTherapistTraining 2013-09-04 13:44:18       222             2.067            +1
-## 17    Tfcbt              dbo.tblTraining 2013-09-04 13:44:18       329             2.067             0
-## 18    Tfcbt              dbo.tblUclaPtsd 2013-09-04 13:44:18         0             2.067             0
+## 1     Tfcbt                dbo.tblAgency 2013-09-06 11:30:40        86             1.316          -172
+## 2     Tfcbt        dbo.tblAgencyLocation 2013-09-06 11:30:40       203             1.316             0
+## 3     Tfcbt             dbo.tblCallGroup 2013-09-06 11:30:40        29             1.316             0
+## 4     Tfcbt      dbo.tblCallGroupMeeting 2013-09-06 11:30:40       169             1.316             0
+## 5     Tfcbt                  dbo.tblEval 2013-09-06 11:30:40         0             1.316             0
+## 6     Tfcbt  dbo.tblImplementationSurvey 2013-09-06 11:30:40         0             1.316             0
+## 7     Tfcbt             dbo.tblLUDecided 2013-09-06 11:30:40         3             1.316             0
+## 8     Tfcbt              dbo.tblLUGender 2013-09-06 11:30:40         3             1.316             0
+## 9     Tfcbt              dbo.tblLUSource 2013-09-06 11:30:40         5             1.316             0
+## 10    Tfcbt        dbo.tblLUTrainingType 2013-09-06 11:30:40        10             1.316           -20
+## 11    Tfcbt             dbo.tblPresenter 2013-09-06 11:30:40         6             1.316           -12
+## 12    Tfcbt               dbo.tblSession 2013-09-06 11:30:40         2             1.316            -6
+## 13    Tfcbt             dbo.tblTherapist 2013-09-06 11:30:40       223             1.316          -892
+## 14    Tfcbt         dbo.tblTherapistEval 2013-09-06 11:30:40         0             1.316             0
+## 15    Tfcbt dbo.tblTherapistGroupMeeting 2013-09-06 11:30:40         0             1.316             0
+## 16    Tfcbt     dbo.tblTherapistTraining 2013-09-06 11:30:40       341             1.316            +2
+## 17    Tfcbt              dbo.tblTraining 2013-09-06 11:30:40        47             1.316          -282
+## 18    Tfcbt              dbo.tblUclaPtsd 2013-09-06 11:30:40         0             1.316             0
+## 19    Tfcbt                  sysdiagrams 2013-09-06 11:26:49         1                NA              
+## 20    Tfcbt                    tblAgency 2013-09-06 11:26:49        86                NA              
+## 21    Tfcbt            tblAgencyLocation 2013-09-06 11:26:49       203                NA              
+## 22    Tfcbt                 tblCallGroup 2013-09-06 11:26:49        29                NA              
+## 23    Tfcbt          tblCallGroupMeeting 2013-09-06 11:26:49       169                NA              
+## 24    Tfcbt                      tblEval 2013-09-06 11:26:49         0                NA              
+## 25    Tfcbt      tblImplementationSurvey 2013-09-06 11:26:49         0                NA              
+## 26    Tfcbt                 tblLUDecided 2013-09-06 11:26:49         3                NA              
+## 27    Tfcbt                  tblLUGender 2013-09-06 11:26:49         3                NA              
+## 28    Tfcbt                  tblLUSource 2013-09-06 11:26:49         5                NA              
+## 29    Tfcbt            tblLUTrainingType 2013-09-06 11:26:49        10                NA              
+## 30    Tfcbt                 tblPresenter 2013-09-06 11:26:49         6                NA              
+## 31    Tfcbt                   tblSession 2013-09-06 11:26:49         2                NA              
+## 32    Tfcbt                 tblTherapist 2013-09-06 11:26:49       223                NA              
+## 33    Tfcbt             tblTherapistEval 2013-09-06 11:26:49         0                NA              
+## 34    Tfcbt     tblTherapistGroupMeeting 2013-09-06 11:26:49         0                NA              
+## 35    Tfcbt         tblTherapistTraining 2013-09-06 11:26:49       341                NA              
+## 36    Tfcbt                  tblTraining 2013-09-06 11:26:49        47                NA              
+## 37    Tfcbt                  tblUclaPtsd 2013-09-06 11:26:49         0                NA
 ```
 
 
 ## Tfcbt  database graphs
 ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph1.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph2.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph3.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph4.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph5.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph6.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph7.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph8.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph9.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph10.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph11.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph12.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph13.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph14.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph15.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph16.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph17.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph18.png) 
+
+```
+## Error: range too small for 'min.n'
+```
 
