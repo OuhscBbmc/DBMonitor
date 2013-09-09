@@ -126,7 +126,7 @@ recordsAffected <- RCurl::postForm(
   data=csv,
   .opts=curlOptions(ssl.verifypeer=FALSE)
 )
-message(paste("Count of records written & updated to REDCap:", as.integer(recordsAffected)))
+message(paste("Count of records (ie, database tables being monitored) written & updated to REDCap:", as.integer(recordsAffected)))
 rm(csv, recordsAffected)
 #############################
 ### Read from REDCap  if you want to verify

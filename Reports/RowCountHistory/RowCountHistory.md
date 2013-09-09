@@ -26,8 +26,8 @@
 
 
 ```
-## This report covers records between 2013-08-30 00:30:28 and 2013-09-06 11:30:40.
-## This report contains information from 1 databases, 37 tables, and 415 records.
+## This report covers records between 2013-08-30 00:30:28 and 2013-09-09 11:31:27.
+## This report contains information from 1 databases, 37 tables, and 451 records.
 ```
 
 
@@ -39,24 +39,24 @@ Below the table are line graphs that show the history of each database table.  T
 
 ```
 ##    database                        table          probe_date row_count time_gap_in_hours change_pretty
-## 1     Tfcbt                dbo.tblAgency 2013-09-06 11:30:40        86             1.316          -172
-## 2     Tfcbt        dbo.tblAgencyLocation 2013-09-06 11:30:40       203             1.316             0
-## 3     Tfcbt             dbo.tblCallGroup 2013-09-06 11:30:40        29             1.316             0
-## 4     Tfcbt      dbo.tblCallGroupMeeting 2013-09-06 11:30:40       169             1.316             0
-## 5     Tfcbt                  dbo.tblEval 2013-09-06 11:30:40         0             1.316             0
-## 6     Tfcbt  dbo.tblImplementationSurvey 2013-09-06 11:30:40         0             1.316             0
-## 7     Tfcbt             dbo.tblLUDecided 2013-09-06 11:30:40         3             1.316             0
-## 8     Tfcbt              dbo.tblLUGender 2013-09-06 11:30:40         3             1.316             0
-## 9     Tfcbt              dbo.tblLUSource 2013-09-06 11:30:40         5             1.316             0
-## 10    Tfcbt        dbo.tblLUTrainingType 2013-09-06 11:30:40        10             1.316           -20
-## 11    Tfcbt             dbo.tblPresenter 2013-09-06 11:30:40         6             1.316           -12
-## 12    Tfcbt               dbo.tblSession 2013-09-06 11:30:40         2             1.316            -6
-## 13    Tfcbt             dbo.tblTherapist 2013-09-06 11:30:40       223             1.316          -892
-## 14    Tfcbt         dbo.tblTherapistEval 2013-09-06 11:30:40         0             1.316             0
-## 15    Tfcbt dbo.tblTherapistGroupMeeting 2013-09-06 11:30:40         0             1.316             0
-## 16    Tfcbt     dbo.tblTherapistTraining 2013-09-06 11:30:40       341             1.316            +2
-## 17    Tfcbt              dbo.tblTraining 2013-09-06 11:30:40        47             1.316          -282
-## 18    Tfcbt              dbo.tblUclaPtsd 2013-09-06 11:30:40         0             1.316             0
+## 1     Tfcbt                dbo.tblAgency 2013-09-09 11:31:27        86             67.79             0
+## 2     Tfcbt        dbo.tblAgencyLocation 2013-09-09 11:31:27       203             67.79             0
+## 3     Tfcbt             dbo.tblCallGroup 2013-09-09 11:31:27        29             67.79             0
+## 4     Tfcbt      dbo.tblCallGroupMeeting 2013-09-09 11:31:27       169             67.79             0
+## 5     Tfcbt                  dbo.tblEval 2013-09-09 11:31:27         0             67.79             0
+## 6     Tfcbt  dbo.tblImplementationSurvey 2013-09-09 11:31:27         0             67.79             0
+## 7     Tfcbt             dbo.tblLUDecided 2013-09-09 11:31:27         3             67.79             0
+## 8     Tfcbt              dbo.tblLUGender 2013-09-09 11:31:27         3             67.79             0
+## 9     Tfcbt              dbo.tblLUSource 2013-09-09 11:31:27         5             67.79             0
+## 10    Tfcbt        dbo.tblLUTrainingType 2013-09-09 11:31:27        10             67.79             0
+## 11    Tfcbt             dbo.tblPresenter 2013-09-09 11:31:27         6             67.79             0
+## 12    Tfcbt               dbo.tblSession 2013-09-09 11:31:27         2             67.79             0
+## 13    Tfcbt             dbo.tblTherapist 2013-09-09 11:31:27       225             67.79            +4
+## 14    Tfcbt         dbo.tblTherapistEval 2013-09-09 11:31:27         0             67.79             0
+## 15    Tfcbt dbo.tblTherapistGroupMeeting 2013-09-09 11:31:27         0             67.79             0
+## 16    Tfcbt     dbo.tblTherapistTraining 2013-09-09 11:31:27       341             67.79            +4
+## 17    Tfcbt              dbo.tblTraining 2013-09-09 11:31:27        47             67.79             0
+## 18    Tfcbt              dbo.tblUclaPtsd 2013-09-09 11:31:27         0             67.79             0
 ## 19    Tfcbt                  sysdiagrams 2013-09-06 11:26:49         1                NA              
 ## 20    Tfcbt                    tblAgency 2013-09-06 11:26:49        86                NA              
 ## 21    Tfcbt            tblAgencyLocation 2013-09-06 11:26:49       203                NA              
