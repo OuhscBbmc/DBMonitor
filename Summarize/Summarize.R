@@ -70,7 +70,8 @@ rm(dsRecordIDs, rawCsvText)
 #############################
 #http://stackoverflow.com/questions/2221555/how-to-fetch-the-row-count-for-all-tables-in-a-sql-server-database
 # sql <- "SELECT SCHEMA_NAME(A.schema_id) + '.' + A.Name as [table], SUM(B.rows) AS 'row_count' FROM sys.objects A INNER JOIN sys.partitions B ON A.object_id = B.object_id WHERE A.type = 'U' GROUP BY A.schema_id, A.Name"
-sql <- "SELECT  SCHEMA_NAME(o.schema_id) + '.' + o.name as [table], ddps.row_count  FROM sys.indexes AS i INNER JOIN sys.objects AS o ON i.OBJECT_ID = o.OBJECT_ID INNER JOIN sys.dm_db_partition_stats AS ddps ON i.OBJECT_ID = ddps.OBJECT_ID AND i.index_id = ddps.index_id WHERE i.index_id < 2  AND o.is_ms_shipped = 0 ORDER BY o.NAME"
+# sql <- "SELECT  SCHEMA_NAME(o.schema_id) + '.' + o.name as [table], ddps.row_count  FROM sys.indexes AS i INNER JOIN sys.objects AS o ON i.OBJECT_ID = o.OBJECT_ID INNER JOIN sys.dm_db_partition_stats AS ddps ON i.OBJECT_ID = ddps.OBJECT_ID AND i.index_id = ddps.index_id WHERE i.index_id < 2  AND o.is_ms_shipped = 0 ORDER BY o.NAME"
+sql <- "SELECT  SCHEMA_NAME(o.schema_id) + '.' + o.name as [table], '[' +SCHEMA_NAME(o.schema_id) + '].[' + o.name +']' as [table_escaped], ddps.row_count  FROM sys.indexes AS i INNER JOIN sys.objects AS o ON i.OBJECT_ID = o.OBJECT_ID INNER JOIN sys.dm_db_partition_stats AS ddps ON i.OBJECT_ID = ddps.OBJECT_ID AND i.index_id = ddps.index_id WHERE i.index_id < 2  AND o.is_ms_shipped = 0 ORDER BY o.NAME"
 dsRow <- NULL
 for( i in seq_len(nrow(dsRoster)) ) {
   channel <- RODBC::odbcConnect(dsRoster[i, 'dsn']) 
@@ -131,17 +132,17 @@ rm(csv, recordsAffected)
 #############################
 ### Read from REDCap  if you want to verify
 #############################
-# rawCsvText <- RCurl::postForm(
-#   uri=redcapUri, 
-#   token=tokenLog,
-#   content='record',
-#   format='csv', 
-#   type='flat', 
-#   .opts=curlOptions(ssl.verifypeer=FALSE)
-# )
-# # head(rawCsvText) #Inspect the raw data, if desired.
-# dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
-# object.size(dsLog)
-# rm(dsLog, rawCsvText, redcapUri)
+rawCsvText <- RCurl::postForm(
+  uri=redcapUri, 
+  token=tokenLog,
+  content='record',
+  format='csv', 
+  type='flat', 
+  .opts=curlOptions(ssl.verifypeer=FALSE)
+)
+# head(rawCsvText) #Inspect the raw data, if desired.
+dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
+object.size(dsLog)
+rm(dsLog, rawCsvText, redcapUri)
 
 rm(tokenLog)

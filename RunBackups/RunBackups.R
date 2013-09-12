@@ -57,11 +57,12 @@ for( i in seq_len(nrow(dsRoster)) ) {
   dsTableNameInDatabase <- RODBC::sqlTables(channel, catalog=dsRoster[i, 'database'], tableType="TABLE")
   RODBC::odbcClose(channel)
   
-  dsTableNameInDatabase$type <- NULL #This always be table, when RODBC::sqlTables is passed " tableType="TABLE" "
+  dsTableNameInDatabase$type <- NULL #This always should be a table, when RODBC::sqlTables is passed " tableType="TABLE" "
   dsTableNameInDatabase$remarks <- NULL #Unlikely to ever be used in this application
   
   sqlServerTablesToExclude <- unlist(strsplit(dsRoster$tables_to_ignore[i],  ";"))
   dsTableNameInDatabase$table <- paste0(dsTableNameInDatabase$TABLE_SCHEM, ".", dsTableNameInDatabase$TABLE_NAME)  
+  dsTableNameInDatabase$table_escaped <- paste0("[", dsTableNameInDatabase$TABLE_SCHEM, "].[", dsTableNameInDatabase$TABLE_NAME, "]")  
   dsTableNameInDatabase <- dsTableNameInDatabase[!(dsTableNameInDatabase$table %in% sqlServerTablesToExclude), ]
   
   dsTableName <- rbind(dsTableName, dsTableNameInDatabase)
@@ -79,14 +80,14 @@ dsTableName <- plyr::rename(dsTableName, replace=c(
 ))
 
 dsRosterAndTable <- plyr::join(x=dsRoster, y=dsTableName, by="database", type="left", match="all")
-dsRosterAndTable$table_safe <- gsub(pattern="\\.", replacement="_", x=dsRosterAndTable$table)
-dsRosterAndTable$backup_path <- paste0(file.path(dsRosterAndTable$backup_path, dsRosterAndTable$table_safe), ".csv", compressionExtension)
+dsRosterAndTable$table_file_safe <- gsub(pattern="\\.", replacement="_", x=dsRosterAndTable$table)
+dsRosterAndTable$backup_path <- paste0(file.path(dsRosterAndTable$backup_path, dsRosterAndTable$table_file_safe), ".csv", compressionExtension)
 
 #############################
 ### Create a directory for each database's backups
 #############################
 for( i in seq_len(nrow(dsRoster)) ) {
-  dir.create(dsRoster$backup_path)  
+  dir.create(dsRoster$backup_path[i])  
 }
 
 #############################
