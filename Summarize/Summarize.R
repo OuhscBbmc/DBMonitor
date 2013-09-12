@@ -34,7 +34,7 @@ rawCsvText <- RCurl::postForm(
   content='record',
   format='csv', 
   type='flat', 
-  .opts=curlOptions(ssl.verifypeer=FALSE)
+  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 # head(rawCsvText) #Inspect the raw data, if desired.
 dsRoster <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
@@ -56,7 +56,7 @@ rawCsvText <- RCurl::postForm(
   format='csv', 
   type='flat', 
   fields=c("record_id"), 
-  .opts=curlOptions(ssl.verifypeer=FALSE)
+  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 # head(rawCsvText) #Inspect the raw data, if desired.
 dsRecordIDs <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
@@ -125,7 +125,7 @@ recordsAffected <- RCurl::postForm(
   type='flat', 
   overwriteBehavior='normal', #overwriteBehavior: *normal* - blank/empty values will be ignored [default]; *overwrite* - blank/empty values are valid and will overwrite data
   data=csv,
-  .opts=curlOptions(ssl.verifypeer=FALSE)
+  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 message(paste("Count of records (ie, database tables being monitored) written & updated to REDCap:", as.integer(recordsAffected)))
 rm(csv, recordsAffected)
@@ -138,7 +138,7 @@ rawCsvText <- RCurl::postForm(
   content='record',
   format='csv', 
   type='flat', 
-  .opts=curlOptions(ssl.verifypeer=FALSE)
+  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 # head(rawCsvText) #Inspect the raw data, if desired.
 dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.

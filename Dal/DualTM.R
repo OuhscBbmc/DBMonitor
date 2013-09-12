@@ -33,7 +33,7 @@ rawCsvText <- RCurl::postForm(
   content='record',
   format='csv', 
   type='flat', 
-  .opts=curlOptions(ssl.verifypeer=FALSE)
+  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 # head(rawCsvText) #Inspect the raw data, if desired.
 dsRoster <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
@@ -56,7 +56,7 @@ rawCsvText <- RCurl::postForm(
   content='record',
   format='csv', 
   type='flat', 
-  .opts=curlOptions(ssl.verifypeer=FALSE)
+  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 # head(rawCsvText) #Inspect the raw data, if desired.
 dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
