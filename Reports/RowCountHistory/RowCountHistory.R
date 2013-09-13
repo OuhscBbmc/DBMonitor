@@ -26,14 +26,18 @@ GraphTableHistory <- function( databaseName, tableName ) {
 }
 ## @knitr LoadDS
 ############################
-{ #This bracket permits the 'else' clause (because it's located on the top layer of the code.)
-  if( basename(getwd()) == "DBMonitor" ) #This clause executes when run from the *.R file.
-    pathDirectoryCode <- file.path(getwd(), "Dal", "DualTM.R")
-  else if( basename(getwd()) == "RowCountHistory" ) #This clause executes when run from the *.Rmd/Rnw file.
-    pathDirectoryCode <- file.path(dirname(dirname(getwd())), "Dal", "DualTM.R")
-  else
-    stop(paste0("The working directory '", basename(getwd()),"' was not anticipated.  If appropriate, please go near the top of the 'RowCountHistory.R' code and add this new location."))
-}
+# { #This bracket permits the 'else' clause (because it's located on the top layer of the code.)
+#   if( basename(getwd()) == "DBMonitor" ) {#This clause executes when run from the *.R file.
+#     pathDirectoryCode <- file.path(getwd(), "Dal", "DualTM.R")
+#   }
+#   else if( basename(getwd()) == "RowCountHistory" ) {#This clause executes when run from the *.Rmd/Rnw file.
+#     pathDirectoryCode <- file.path(dirname(dirname(getwd())), "Dal", "DualTM.R")
+#   }
+#   else {
+#     stop(paste0("The working directory '", basename(getwd()),"' was not anticipated.  If appropriate, please go near the top of the 'RowCountHistory.R' code and add this new location."))
+#   }
+# }
+pathDirectoryCode <- "./Dal/DualTM.R"
 
 if( !file.exists(pathDirectoryCode) ) stop(paste0("The file '", pathDirectoryCode, "' could not be found.  Check the path.  For this to work correctly, the 'MReporting.Rproj' needed to be opend in RStudio.  Otherwise the working directory."))
 source(pathDirectoryCode)
@@ -77,8 +81,8 @@ dsLogLast
 ## @knitr RowCountGraph
 ############################
 for( databaseName in sort(unique(dsLog$database)) ) {
-  cat("##", databaseName, " database graphs\n")
-  for( tableName in sort(unique(dsLog$table)) ) {
+  cat("\n##", databaseName, " database graphs\n")
+  for( tableName in sort(unique(dsLog[dsLog$database==databaseName, 'table'])) ) {
     g <- GraphTableHistory(databaseName, tableName)
     print(g)
   }

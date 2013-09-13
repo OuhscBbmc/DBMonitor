@@ -143,6 +143,7 @@ rawCsvText <- RCurl::postForm(
 # head(rawCsvText) #Inspect the raw data, if desired.
 dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
 object.size(dsLog)
+
 rm(dsLog, rawCsvText, redcapUri)
 
 rm(tokenLog)

@@ -3,13 +3,22 @@
 **Report Description**: This report helps monitor the activity and (partial) health of the databases.
 
 <!-- Point knitr to the underlying code file so it knows where to look for the chunks. -->
+```{r, echo=FALSE, message=F} 
+#Set the chunks' working directory to the repository's base directory; this assumes the report is nested inside of two directories.
+opts_knit$set(root.dir='../../')  #Don't combine this call with any other chunk -espeically one that uses file paths.
+```
 ```{r, echo=FALSE, message=F}
-opts_chunk$set(fig.width=12, fig.height=3, fig.path='FigureRmd/')#, dpi=400)
+# getwd()
+opts_chunk$set(fig.width=12, 
+               fig.height=3, 
+               fig.path='FigureRmd/'
+               )#, dpi=400)
+
 options(width=120)
                
 require(xtable)
 require(scales)
-pathSourceCode <- file.path(getwd(), "RowCountHistory.R")
+pathSourceCode <- "./Reports/RowCountHistory/RowCountHistory.R"
 read_chunk(pathSourceCode) 
 ```
 
