@@ -11,18 +11,31 @@ require(scales, quietly=TRUE)
 
 ## @knitr DeclareGlobalFunctions
 ############################
-
+integer_breaks <- function(n = 5, ...) {
+  #from http://stackoverflow.com/questions/10558918/ggplot-2-facet-grid-free-y-but-forcing-y-axis-to-be-rounded-to-nearest-whole-n
+  breaker <- pretty_breaks(n, ...)
+  function(x) {
+    breaks <- breaker(x)
+    breaks <- breaks[breaks == floor(breaks)]
+    
+#     if( length(breaks) == 1 ) 
+#       breaks <- breaks + -1:1 #It doesn't expand the scale
+#     print(breaks)
+    return( breaks )
+  }
+}
 GraphTableHistory <- function( databaseName, tableName ) {
   dsPlot <- dsLog[dsLog$database==databaseName & dsLog$table==tableName, ]
   
   ggplot(dsPlot, aes(x=probe_date, y=row_count, label=change, color=sign_plus)) +
     #geom_text(vjust=-.5) +
-    geom_text(hjust=-.4) +
+    geom_text(hjust=-.4, vjust=1.2) +
     geom_point() +
     geom_line(mapping=aes(color=sign_minus)) +
-    scale_color_gradient2(low="red", mid="gray50", high="blue", guide=FALSE) +
+    scale_y_continuous(breaks=integer_breaks(), expand=c(.2, 2)) +
+    scale_color_gradient2(low="red", mid="gray70", high="blue", guide=FALSE) +
     theme_bw() + 
-    labs(title=tableName, x="Probe Data", y="Row Count in Table")
+    labs(title=tableName, x="Probe Date", y="Row Count in Table")
 }
 ## @knitr LoadDS
 ############################
@@ -87,3 +100,6 @@ for( databaseName in sort(unique(dsLog$database)) ) {
     print(g)
   }
 }
+# GraphTableHistory("Tfcbt", "dbo.tblPresenter")
+# GraphTableHistory("Tfcbt", "dbo.tblLUGender")
+# GraphTableHistory("Tfcbt", "dbo.tblTherapist")
