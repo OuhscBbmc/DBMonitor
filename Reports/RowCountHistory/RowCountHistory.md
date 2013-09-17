@@ -80,7 +80,5652 @@ Below the table are line graphs that show the history of each database table.  T
 
 
 ## Autism  database graphs
-![plot of chunk RowCountGraph](FigureRmd/RowCountGraph1.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph2.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph3.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph4.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph5.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph6.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph7.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph8.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph9.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph10.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph11.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph12.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph13.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph14.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph15.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph16.png) 
+
+#### dbo.AEPS ADAPTIVE 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554442f1758 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554442f1758() {
+var data = gvisDataAnnotatedTimeLineID1554442f1758();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554442f1758')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554442f1758);
+})();
+function displayChartAnnotatedTimeLineID1554442f1758() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554442f1758"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554442f1758"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.AEPS COGNITIVE 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155443b654ce () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155443b654ce() {
+var data = gvisDataAnnotatedTimeLineID155443b654ce();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155443b654ce')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155443b654ce);
+})();
+function displayChartAnnotatedTimeLineID155443b654ce() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155443b654ce"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155443b654ce"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.AEPS FINEMOTOR 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15541d2d2220 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15541d2d2220() {
+var data = gvisDataAnnotatedTimeLineID15541d2d2220();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15541d2d2220')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15541d2d2220);
+})();
+function displayChartAnnotatedTimeLineID15541d2d2220() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15541d2d2220"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15541d2d2220"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.AEPS GROSSMOTOR 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15544646621b () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15544646621b() {
+var data = gvisDataAnnotatedTimeLineID15544646621b();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15544646621b')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15544646621b);
+})();
+function displayChartAnnotatedTimeLineID15544646621b() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15544646621b"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15544646621b"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.AEPS SOCIAL 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155458284155 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155458284155() {
+var data = gvisDataAnnotatedTimeLineID155458284155();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155458284155')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155458284155);
+})();
+function displayChartAnnotatedTimeLineID155458284155() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155458284155"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155458284155"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.AEPS SOCIALCOMM 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554799b3f9f () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554799b3f9f() {
+var data = gvisDataAnnotatedTimeLineID1554799b3f9f();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554799b3f9f')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554799b3f9f);
+})();
+function displayChartAnnotatedTimeLineID1554799b3f9f() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554799b3f9f"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554799b3f9f"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Demographics 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554fc85def () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+19 
+],
+[
+ new Date(2013,8,10,23,48,54),
+19 
+],
+[
+ new Date(2013,8,12,20,43,12),
+19 
+],
+[
+ new Date(2013,8,15,15,9,48),
+19 
+],
+[
+ new Date(2013,8,16,15,59,35),
+19 
+],
+[
+ new Date(2013,8,16,16,1,20),
+19 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554fc85def() {
+var data = gvisDataAnnotatedTimeLineID1554fc85def();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554fc85def')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554fc85def);
+})();
+function displayChartAnnotatedTimeLineID1554fc85def() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554fc85def"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554fc85def"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Demographics old 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155411bc5cb3 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+7 
+],
+[
+ new Date(2013,8,10,23,48,54),
+7 
+],
+[
+ new Date(2013,8,12,20,43,12),
+7 
+],
+[
+ new Date(2013,8,15,15,9,48),
+7 
+],
+[
+ new Date(2013,8,16,15,59,35),
+7 
+],
+[
+ new Date(2013,8,16,16,1,20),
+7 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155411bc5cb3() {
+var data = gvisDataAnnotatedTimeLineID155411bc5cb3();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155411bc5cb3')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155411bc5cb3);
+})();
+function displayChartAnnotatedTimeLineID155411bc5cb3() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155411bc5cb3"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155411bc5cb3"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.EFdatasheet 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15547d5415b1 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+13785 
+],
+[
+ new Date(2013,8,10,23,48,54),
+13785 
+],
+[
+ new Date(2013,8,12,20,43,12),
+13785 
+],
+[
+ new Date(2013,8,15,15,9,48),
+13785 
+],
+[
+ new Date(2013,8,16,15,59,35),
+13785 
+],
+[
+ new Date(2013,8,16,16,1,20),
+13785 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15547d5415b1() {
+var data = gvisDataAnnotatedTimeLineID15547d5415b1();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15547d5415b1')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15547d5415b1);
+})();
+function displayChartAnnotatedTimeLineID15547d5415b1() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15547d5415b1"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15547d5415b1"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Mullen 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554203c15d7 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554203c15d7() {
+var data = gvisDataAnnotatedTimeLineID1554203c15d7();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554203c15d7')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554203c15d7);
+})();
+function displayChartAnnotatedTimeLineID1554203c15d7() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554203c15d7"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554203c15d7"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Satisfaction_Survey 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15543e237eaf () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15543e237eaf() {
+var data = gvisDataAnnotatedTimeLineID15543e237eaf();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15543e237eaf')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15543e237eaf);
+})();
+function displayChartAnnotatedTimeLineID15543e237eaf() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15543e237eaf"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15543e237eaf"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.SkillsChecklist 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155425543452 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155425543452() {
+var data = gvisDataAnnotatedTimeLineID155425543452();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155425543452')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155425543452);
+})();
+function displayChartAnnotatedTimeLineID155425543452() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155425543452"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155425543452"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblABC 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554d53440e () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+5 
+],
+[
+ new Date(2013,8,10,23,48,54),
+5 
+],
+[
+ new Date(2013,8,12,20,43,12),
+5 
+],
+[
+ new Date(2013,8,15,15,9,48),
+5 
+],
+[
+ new Date(2013,8,16,15,59,35),
+5 
+],
+[
+ new Date(2013,8,16,16,1,20),
+5 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554d53440e() {
+var data = gvisDataAnnotatedTimeLineID1554d53440e();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554d53440e')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554d53440e);
+})();
+function displayChartAnnotatedTimeLineID1554d53440e() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554d53440e"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554d53440e"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Treatment Questions 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155437351119 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155437351119() {
+var data = gvisDataAnnotatedTimeLineID155437351119();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155437351119')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155437351119);
+})();
+function displayChartAnnotatedTimeLineID155437351119() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155437351119"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155437351119"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Vineland 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155445beb () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155445beb() {
+var data = gvisDataAnnotatedTimeLineID155445beb();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155445beb')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155445beb);
+})();
+function displayChartAnnotatedTimeLineID155445beb() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155445beb"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155445beb"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.Vineland2 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554339b5ef2 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554339b5ef2() {
+var data = gvisDataAnnotatedTimeLineID1554339b5ef2();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,8,10,23,17,32);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554339b5ef2')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554339b5ef2);
+})();
+function displayChartAnnotatedTimeLineID1554339b5ef2() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554339b5ef2"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554339b5ef2"
+  style="width: 600px; height: 200px;">
+</div>
+
 ## Tfcbt  database graphs
-![plot of chunk RowCountGraph](FigureRmd/RowCountGraph17.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph18.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph19.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph20.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph21.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph22.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph23.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph24.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph25.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph26.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph27.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph28.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph29.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph30.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph31.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph32.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph33.png) ![plot of chunk RowCountGraph](FigureRmd/RowCountGraph34.png) 
+
+#### dbo.tblAgency 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554402a773e () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+83 
+],
+[
+ new Date(2013,7,30,21,36,36),
+83 
+],
+[
+ new Date(2013,7,30,21,41,46),
+83 
+],
+[
+ new Date(2013,7,30,21,43,3),
+83 
+],
+[
+ new Date(2013,7,30,21,45,19),
+83 
+],
+[
+ new Date(2013,7,30,22,18,33),
+83 
+],
+[
+ new Date(2013,7,30,22,19,0),
+83 
+],
+[
+ new Date(2013,7,31,23,17,38),
+83 
+],
+[
+ new Date(2013,8,1,18,17,45),
+83 
+],
+[
+ new Date(2013,8,2,18,18,26),
+83 
+],
+[
+ new Date(2013,8,2,21,24,47),
+83 
+],
+[
+ new Date(2013,8,2,22,9,14),
+83 
+],
+[
+ new Date(2013,8,3,9,32,47),
+83 
+],
+[
+ new Date(2013,8,3,11,10,12),
+85 
+],
+[
+ new Date(2013,8,3,12,9,27),
+85 
+],
+[
+ new Date(2013,8,3,15,29,47),
+85 
+],
+[
+ new Date(2013,8,4,11,40,18),
+85 
+],
+[
+ new Date(2013,8,4,13,44,18),
+85 
+],
+[
+ new Date(2013,8,4,21,14,19),
+85 
+],
+[
+ new Date(2013,8,5,13,44,54),
+86 
+],
+[
+ new Date(2013,8,6,10,11,44),
+86 
+],
+[
+ new Date(2013,8,6,11,30,40),
+86 
+],
+[
+ new Date(2013,8,6,15,43,56),
+86 
+],
+[
+ new Date(2013,8,9,11,31,27),
+86 
+],
+[
+ new Date(2013,8,10,23,17,32),
+86 
+],
+[
+ new Date(2013,8,10,23,48,54),
+86 
+],
+[
+ new Date(2013,8,12,20,43,12),
+86 
+],
+[
+ new Date(2013,8,15,15,9,48),
+86 
+],
+[
+ new Date(2013,8,16,15,59,35),
+86 
+],
+[
+ new Date(2013,8,16,16,1,20),
+86 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554402a773e() {
+var data = gvisDataAnnotatedTimeLineID1554402a773e();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554402a773e')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554402a773e);
+})();
+function displayChartAnnotatedTimeLineID1554402a773e() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554402a773e"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554402a773e"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblAgencyLocation 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:48 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15542fa65fd9 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+199 
+],
+[
+ new Date(2013,7,30,21,36,36),
+199 
+],
+[
+ new Date(2013,7,30,21,41,46),
+199 
+],
+[
+ new Date(2013,7,30,21,43,3),
+199 
+],
+[
+ new Date(2013,7,30,21,45,19),
+199 
+],
+[
+ new Date(2013,7,30,22,18,33),
+199 
+],
+[
+ new Date(2013,7,30,22,19,0),
+199 
+],
+[
+ new Date(2013,7,31,23,17,38),
+199 
+],
+[
+ new Date(2013,8,1,18,17,45),
+199 
+],
+[
+ new Date(2013,8,2,18,18,26),
+199 
+],
+[
+ new Date(2013,8,2,21,24,47),
+199 
+],
+[
+ new Date(2013,8,2,22,9,14),
+199 
+],
+[
+ new Date(2013,8,3,9,32,47),
+199 
+],
+[
+ new Date(2013,8,3,11,10,12),
+202 
+],
+[
+ new Date(2013,8,3,12,9,27),
+202 
+],
+[
+ new Date(2013,8,3,15,29,47),
+202 
+],
+[
+ new Date(2013,8,4,11,40,18),
+202 
+],
+[
+ new Date(2013,8,4,13,44,18),
+202 
+],
+[
+ new Date(2013,8,4,21,14,19),
+202 
+],
+[
+ new Date(2013,8,5,13,44,54),
+203 
+],
+[
+ new Date(2013,8,6,10,11,44),
+203 
+],
+[
+ new Date(2013,8,6,11,30,40),
+203 
+],
+[
+ new Date(2013,8,6,15,43,56),
+203 
+],
+[
+ new Date(2013,8,9,11,31,27),
+203 
+],
+[
+ new Date(2013,8,10,23,17,32),
+203 
+],
+[
+ new Date(2013,8,10,23,48,54),
+203 
+],
+[
+ new Date(2013,8,12,20,43,12),
+203 
+],
+[
+ new Date(2013,8,15,15,9,48),
+203 
+],
+[
+ new Date(2013,8,16,15,59,35),
+203 
+],
+[
+ new Date(2013,8,16,16,1,20),
+203 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15542fa65fd9() {
+var data = gvisDataAnnotatedTimeLineID15542fa65fd9();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15542fa65fd9')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15542fa65fd9);
+})();
+function displayChartAnnotatedTimeLineID15542fa65fd9() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15542fa65fd9"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15542fa65fd9"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblCallGroup 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155461c01920 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+26 
+],
+[
+ new Date(2013,7,30,21,36,36),
+26 
+],
+[
+ new Date(2013,7,30,21,41,46),
+26 
+],
+[
+ new Date(2013,7,30,21,43,3),
+26 
+],
+[
+ new Date(2013,7,30,21,45,19),
+26 
+],
+[
+ new Date(2013,7,30,22,18,33),
+26 
+],
+[
+ new Date(2013,7,30,22,19,0),
+26 
+],
+[
+ new Date(2013,7,31,23,17,38),
+26 
+],
+[
+ new Date(2013,8,1,18,17,45),
+26 
+],
+[
+ new Date(2013,8,2,18,18,26),
+26 
+],
+[
+ new Date(2013,8,2,21,24,47),
+26 
+],
+[
+ new Date(2013,8,2,22,9,14),
+26 
+],
+[
+ new Date(2013,8,3,9,32,47),
+29 
+],
+[
+ new Date(2013,8,3,11,10,12),
+29 
+],
+[
+ new Date(2013,8,3,12,9,27),
+29 
+],
+[
+ new Date(2013,8,3,15,29,47),
+29 
+],
+[
+ new Date(2013,8,4,11,40,18),
+29 
+],
+[
+ new Date(2013,8,4,13,44,18),
+29 
+],
+[
+ new Date(2013,8,4,21,14,19),
+29 
+],
+[
+ new Date(2013,8,5,13,44,54),
+29 
+],
+[
+ new Date(2013,8,6,10,11,44),
+29 
+],
+[
+ new Date(2013,8,6,11,30,40),
+29 
+],
+[
+ new Date(2013,8,6,15,43,56),
+29 
+],
+[
+ new Date(2013,8,9,11,31,27),
+29 
+],
+[
+ new Date(2013,8,10,23,17,32),
+29 
+],
+[
+ new Date(2013,8,10,23,48,54),
+29 
+],
+[
+ new Date(2013,8,12,20,43,12),
+29 
+],
+[
+ new Date(2013,8,15,15,9,48),
+29 
+],
+[
+ new Date(2013,8,16,15,59,35),
+29 
+],
+[
+ new Date(2013,8,16,16,1,20),
+29 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155461c01920() {
+var data = gvisDataAnnotatedTimeLineID155461c01920();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155461c01920')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155461c01920);
+})();
+function displayChartAnnotatedTimeLineID155461c01920() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155461c01920"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155461c01920"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblCallGroupMeeting 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155419e69a3 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+169 
+],
+[
+ new Date(2013,7,30,21,36,36),
+169 
+],
+[
+ new Date(2013,7,30,21,41,46),
+169 
+],
+[
+ new Date(2013,7,30,21,43,3),
+169 
+],
+[
+ new Date(2013,7,30,21,45,19),
+169 
+],
+[
+ new Date(2013,7,30,22,18,33),
+169 
+],
+[
+ new Date(2013,7,30,22,19,0),
+169 
+],
+[
+ new Date(2013,7,31,23,17,38),
+169 
+],
+[
+ new Date(2013,8,1,18,17,45),
+169 
+],
+[
+ new Date(2013,8,2,18,18,26),
+169 
+],
+[
+ new Date(2013,8,2,21,24,47),
+169 
+],
+[
+ new Date(2013,8,2,22,9,14),
+169 
+],
+[
+ new Date(2013,8,3,9,32,47),
+169 
+],
+[
+ new Date(2013,8,3,11,10,12),
+169 
+],
+[
+ new Date(2013,8,3,12,9,27),
+169 
+],
+[
+ new Date(2013,8,3,15,29,47),
+169 
+],
+[
+ new Date(2013,8,4,11,40,18),
+169 
+],
+[
+ new Date(2013,8,4,13,44,18),
+169 
+],
+[
+ new Date(2013,8,4,21,14,19),
+169 
+],
+[
+ new Date(2013,8,5,13,44,54),
+169 
+],
+[
+ new Date(2013,8,6,10,11,44),
+169 
+],
+[
+ new Date(2013,8,6,11,30,40),
+169 
+],
+[
+ new Date(2013,8,6,15,43,56),
+169 
+],
+[
+ new Date(2013,8,9,11,31,27),
+169 
+],
+[
+ new Date(2013,8,10,23,17,32),
+169 
+],
+[
+ new Date(2013,8,10,23,48,54),
+169 
+],
+[
+ new Date(2013,8,12,20,43,12),
+169 
+],
+[
+ new Date(2013,8,15,15,9,48),
+169 
+],
+[
+ new Date(2013,8,16,15,59,35),
+169 
+],
+[
+ new Date(2013,8,16,16,1,20),
+169 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155419e69a3() {
+var data = gvisDataAnnotatedTimeLineID155419e69a3();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155419e69a3')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155419e69a3);
+})();
+function displayChartAnnotatedTimeLineID155419e69a3() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155419e69a3"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155419e69a3"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblEval 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15546ec069cc () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+0 
+],
+[
+ new Date(2013,7,30,21,36,36),
+0 
+],
+[
+ new Date(2013,7,30,21,41,46),
+0 
+],
+[
+ new Date(2013,7,30,21,43,3),
+0 
+],
+[
+ new Date(2013,7,30,21,45,19),
+0 
+],
+[
+ new Date(2013,7,30,22,18,33),
+0 
+],
+[
+ new Date(2013,7,30,22,19,0),
+0 
+],
+[
+ new Date(2013,7,31,23,17,38),
+0 
+],
+[
+ new Date(2013,8,1,18,17,45),
+0 
+],
+[
+ new Date(2013,8,2,18,18,26),
+0 
+],
+[
+ new Date(2013,8,2,21,24,47),
+0 
+],
+[
+ new Date(2013,8,2,22,9,14),
+0 
+],
+[
+ new Date(2013,8,3,9,32,47),
+0 
+],
+[
+ new Date(2013,8,3,11,10,12),
+0 
+],
+[
+ new Date(2013,8,3,12,9,27),
+0 
+],
+[
+ new Date(2013,8,3,15,29,47),
+0 
+],
+[
+ new Date(2013,8,4,11,40,18),
+0 
+],
+[
+ new Date(2013,8,4,13,44,18),
+0 
+],
+[
+ new Date(2013,8,4,21,14,19),
+0 
+],
+[
+ new Date(2013,8,5,13,44,54),
+0 
+],
+[
+ new Date(2013,8,6,10,11,44),
+0 
+],
+[
+ new Date(2013,8,6,11,30,40),
+0 
+],
+[
+ new Date(2013,8,6,15,43,56),
+0 
+],
+[
+ new Date(2013,8,9,11,31,27),
+0 
+],
+[
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15546ec069cc() {
+var data = gvisDataAnnotatedTimeLineID15546ec069cc();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15546ec069cc')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15546ec069cc);
+})();
+function displayChartAnnotatedTimeLineID15546ec069cc() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15546ec069cc"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15546ec069cc"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblImplementationSurvey 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155442b45de1 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+0 
+],
+[
+ new Date(2013,7,30,21,36,36),
+0 
+],
+[
+ new Date(2013,7,30,21,41,46),
+0 
+],
+[
+ new Date(2013,7,30,21,43,3),
+0 
+],
+[
+ new Date(2013,7,30,21,45,19),
+0 
+],
+[
+ new Date(2013,7,30,22,18,33),
+0 
+],
+[
+ new Date(2013,7,30,22,19,0),
+0 
+],
+[
+ new Date(2013,7,31,23,17,38),
+0 
+],
+[
+ new Date(2013,8,1,18,17,45),
+0 
+],
+[
+ new Date(2013,8,2,18,18,26),
+0 
+],
+[
+ new Date(2013,8,2,21,24,47),
+0 
+],
+[
+ new Date(2013,8,2,22,9,14),
+0 
+],
+[
+ new Date(2013,8,3,9,32,47),
+0 
+],
+[
+ new Date(2013,8,3,11,10,12),
+0 
+],
+[
+ new Date(2013,8,3,12,9,27),
+0 
+],
+[
+ new Date(2013,8,3,15,29,47),
+0 
+],
+[
+ new Date(2013,8,4,11,40,18),
+0 
+],
+[
+ new Date(2013,8,4,13,44,18),
+0 
+],
+[
+ new Date(2013,8,4,21,14,19),
+0 
+],
+[
+ new Date(2013,8,5,13,44,54),
+0 
+],
+[
+ new Date(2013,8,6,10,11,44),
+0 
+],
+[
+ new Date(2013,8,6,11,30,40),
+0 
+],
+[
+ new Date(2013,8,6,15,43,56),
+0 
+],
+[
+ new Date(2013,8,9,11,31,27),
+0 
+],
+[
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155442b45de1() {
+var data = gvisDataAnnotatedTimeLineID155442b45de1();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155442b45de1')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155442b45de1);
+})();
+function displayChartAnnotatedTimeLineID155442b45de1() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155442b45de1"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155442b45de1"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblLUDecided 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155475723902 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+3 
+],
+[
+ new Date(2013,7,30,21,36,36),
+3 
+],
+[
+ new Date(2013,7,30,21,41,46),
+3 
+],
+[
+ new Date(2013,7,30,21,43,3),
+3 
+],
+[
+ new Date(2013,7,30,21,45,19),
+3 
+],
+[
+ new Date(2013,7,30,22,18,33),
+3 
+],
+[
+ new Date(2013,7,30,22,19,0),
+3 
+],
+[
+ new Date(2013,7,31,23,17,38),
+3 
+],
+[
+ new Date(2013,8,1,18,17,45),
+3 
+],
+[
+ new Date(2013,8,2,18,18,26),
+3 
+],
+[
+ new Date(2013,8,2,21,24,47),
+3 
+],
+[
+ new Date(2013,8,2,22,9,14),
+3 
+],
+[
+ new Date(2013,8,3,9,32,47),
+3 
+],
+[
+ new Date(2013,8,3,11,10,12),
+3 
+],
+[
+ new Date(2013,8,3,12,9,27),
+3 
+],
+[
+ new Date(2013,8,3,15,29,47),
+3 
+],
+[
+ new Date(2013,8,4,11,40,18),
+3 
+],
+[
+ new Date(2013,8,4,13,44,18),
+3 
+],
+[
+ new Date(2013,8,4,21,14,19),
+3 
+],
+[
+ new Date(2013,8,5,13,44,54),
+3 
+],
+[
+ new Date(2013,8,6,10,11,44),
+3 
+],
+[
+ new Date(2013,8,6,11,30,40),
+3 
+],
+[
+ new Date(2013,8,6,15,43,56),
+3 
+],
+[
+ new Date(2013,8,9,11,31,27),
+3 
+],
+[
+ new Date(2013,8,10,23,17,32),
+3 
+],
+[
+ new Date(2013,8,10,23,48,54),
+3 
+],
+[
+ new Date(2013,8,12,20,43,12),
+3 
+],
+[
+ new Date(2013,8,15,15,9,48),
+3 
+],
+[
+ new Date(2013,8,16,15,59,35),
+3 
+],
+[
+ new Date(2013,8,16,16,1,20),
+3 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155475723902() {
+var data = gvisDataAnnotatedTimeLineID155475723902();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155475723902')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155475723902);
+})();
+function displayChartAnnotatedTimeLineID155475723902() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155475723902"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155475723902"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblLUGender 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15543ec97907 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+3 
+],
+[
+ new Date(2013,7,30,21,36,36),
+3 
+],
+[
+ new Date(2013,7,30,21,41,46),
+3 
+],
+[
+ new Date(2013,7,30,21,43,3),
+3 
+],
+[
+ new Date(2013,7,30,21,45,19),
+3 
+],
+[
+ new Date(2013,7,30,22,18,33),
+3 
+],
+[
+ new Date(2013,7,30,22,19,0),
+3 
+],
+[
+ new Date(2013,7,31,23,17,38),
+3 
+],
+[
+ new Date(2013,8,1,18,17,45),
+4 
+],
+[
+ new Date(2013,8,2,18,18,26),
+4 
+],
+[
+ new Date(2013,8,2,21,24,47),
+4 
+],
+[
+ new Date(2013,8,2,22,9,14),
+3 
+],
+[
+ new Date(2013,8,3,9,32,47),
+3 
+],
+[
+ new Date(2013,8,3,11,10,12),
+3 
+],
+[
+ new Date(2013,8,3,12,9,27),
+3 
+],
+[
+ new Date(2013,8,3,15,29,47),
+3 
+],
+[
+ new Date(2013,8,4,11,40,18),
+3 
+],
+[
+ new Date(2013,8,4,13,44,18),
+3 
+],
+[
+ new Date(2013,8,4,21,14,19),
+3 
+],
+[
+ new Date(2013,8,5,13,44,54),
+3 
+],
+[
+ new Date(2013,8,6,10,11,44),
+3 
+],
+[
+ new Date(2013,8,6,11,30,40),
+3 
+],
+[
+ new Date(2013,8,6,15,43,56),
+3 
+],
+[
+ new Date(2013,8,9,11,31,27),
+3 
+],
+[
+ new Date(2013,8,10,23,17,32),
+3 
+],
+[
+ new Date(2013,8,10,23,48,54),
+3 
+],
+[
+ new Date(2013,8,12,20,43,12),
+3 
+],
+[
+ new Date(2013,8,15,15,9,48),
+3 
+],
+[
+ new Date(2013,8,16,15,59,35),
+3 
+],
+[
+ new Date(2013,8,16,16,1,20),
+3 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15543ec97907() {
+var data = gvisDataAnnotatedTimeLineID15543ec97907();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15543ec97907')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15543ec97907);
+})();
+function displayChartAnnotatedTimeLineID15543ec97907() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15543ec97907"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15543ec97907"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblLUSource 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155465604a71 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+5 
+],
+[
+ new Date(2013,7,30,21,36,36),
+5 
+],
+[
+ new Date(2013,7,30,21,41,46),
+5 
+],
+[
+ new Date(2013,7,30,21,43,3),
+5 
+],
+[
+ new Date(2013,7,30,21,45,19),
+5 
+],
+[
+ new Date(2013,7,30,22,18,33),
+5 
+],
+[
+ new Date(2013,7,30,22,19,0),
+5 
+],
+[
+ new Date(2013,7,31,23,17,38),
+5 
+],
+[
+ new Date(2013,8,1,18,17,45),
+5 
+],
+[
+ new Date(2013,8,2,18,18,26),
+5 
+],
+[
+ new Date(2013,8,2,21,24,47),
+5 
+],
+[
+ new Date(2013,8,2,22,9,14),
+5 
+],
+[
+ new Date(2013,8,3,9,32,47),
+5 
+],
+[
+ new Date(2013,8,3,11,10,12),
+5 
+],
+[
+ new Date(2013,8,3,12,9,27),
+5 
+],
+[
+ new Date(2013,8,3,15,29,47),
+5 
+],
+[
+ new Date(2013,8,4,11,40,18),
+5 
+],
+[
+ new Date(2013,8,4,13,44,18),
+5 
+],
+[
+ new Date(2013,8,4,21,14,19),
+5 
+],
+[
+ new Date(2013,8,5,13,44,54),
+5 
+],
+[
+ new Date(2013,8,6,10,11,44),
+5 
+],
+[
+ new Date(2013,8,6,11,30,40),
+5 
+],
+[
+ new Date(2013,8,6,15,43,56),
+5 
+],
+[
+ new Date(2013,8,9,11,31,27),
+5 
+],
+[
+ new Date(2013,8,10,23,17,32),
+5 
+],
+[
+ new Date(2013,8,10,23,48,54),
+5 
+],
+[
+ new Date(2013,8,12,20,43,12),
+5 
+],
+[
+ new Date(2013,8,15,15,9,48),
+5 
+],
+[
+ new Date(2013,8,16,15,59,35),
+5 
+],
+[
+ new Date(2013,8,16,16,1,20),
+5 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155465604a71() {
+var data = gvisDataAnnotatedTimeLineID155465604a71();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155465604a71')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155465604a71);
+})();
+function displayChartAnnotatedTimeLineID155465604a71() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155465604a71"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155465604a71"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblLUTrainingType 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155458091cce () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+10 
+],
+[
+ new Date(2013,7,30,21,36,36),
+10 
+],
+[
+ new Date(2013,7,30,21,41,46),
+10 
+],
+[
+ new Date(2013,7,30,21,43,3),
+10 
+],
+[
+ new Date(2013,7,30,21,45,19),
+10 
+],
+[
+ new Date(2013,7,30,22,18,33),
+10 
+],
+[
+ new Date(2013,7,30,22,19,0),
+10 
+],
+[
+ new Date(2013,7,31,23,17,38),
+10 
+],
+[
+ new Date(2013,8,1,18,17,45),
+10 
+],
+[
+ new Date(2013,8,2,18,18,26),
+10 
+],
+[
+ new Date(2013,8,2,21,24,47),
+10 
+],
+[
+ new Date(2013,8,2,22,9,14),
+10 
+],
+[
+ new Date(2013,8,3,9,32,47),
+10 
+],
+[
+ new Date(2013,8,3,11,10,12),
+10 
+],
+[
+ new Date(2013,8,3,12,9,27),
+10 
+],
+[
+ new Date(2013,8,3,15,29,47),
+10 
+],
+[
+ new Date(2013,8,4,11,40,18),
+10 
+],
+[
+ new Date(2013,8,4,13,44,18),
+10 
+],
+[
+ new Date(2013,8,4,21,14,19),
+10 
+],
+[
+ new Date(2013,8,5,13,44,54),
+10 
+],
+[
+ new Date(2013,8,6,10,11,44),
+10 
+],
+[
+ new Date(2013,8,6,11,30,40),
+10 
+],
+[
+ new Date(2013,8,6,15,43,56),
+10 
+],
+[
+ new Date(2013,8,9,11,31,27),
+10 
+],
+[
+ new Date(2013,8,10,23,17,32),
+10 
+],
+[
+ new Date(2013,8,10,23,48,54),
+10 
+],
+[
+ new Date(2013,8,12,20,43,12),
+10 
+],
+[
+ new Date(2013,8,15,15,9,48),
+10 
+],
+[
+ new Date(2013,8,16,15,59,35),
+10 
+],
+[
+ new Date(2013,8,16,16,1,20),
+10 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155458091cce() {
+var data = gvisDataAnnotatedTimeLineID155458091cce();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155458091cce')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155458091cce);
+})();
+function displayChartAnnotatedTimeLineID155458091cce() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155458091cce"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155458091cce"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblPresenter 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155426c25336 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+6 
+],
+[
+ new Date(2013,7,30,21,36,36),
+6 
+],
+[
+ new Date(2013,7,30,21,41,46),
+6 
+],
+[
+ new Date(2013,7,30,21,43,3),
+6 
+],
+[
+ new Date(2013,7,30,21,45,19),
+6 
+],
+[
+ new Date(2013,7,30,22,18,33),
+6 
+],
+[
+ new Date(2013,7,30,22,19,0),
+6 
+],
+[
+ new Date(2013,7,31,23,17,38),
+6 
+],
+[
+ new Date(2013,8,1,18,17,45),
+6 
+],
+[
+ new Date(2013,8,2,18,18,26),
+6 
+],
+[
+ new Date(2013,8,2,21,24,47),
+6 
+],
+[
+ new Date(2013,8,2,22,9,14),
+6 
+],
+[
+ new Date(2013,8,3,9,32,47),
+6 
+],
+[
+ new Date(2013,8,3,11,10,12),
+6 
+],
+[
+ new Date(2013,8,3,12,9,27),
+6 
+],
+[
+ new Date(2013,8,3,15,29,47),
+6 
+],
+[
+ new Date(2013,8,4,11,40,18),
+6 
+],
+[
+ new Date(2013,8,4,13,44,18),
+6 
+],
+[
+ new Date(2013,8,4,21,14,19),
+6 
+],
+[
+ new Date(2013,8,5,13,44,54),
+6 
+],
+[
+ new Date(2013,8,6,10,11,44),
+6 
+],
+[
+ new Date(2013,8,6,11,30,40),
+6 
+],
+[
+ new Date(2013,8,6,15,43,56),
+6 
+],
+[
+ new Date(2013,8,9,11,31,27),
+6 
+],
+[
+ new Date(2013,8,10,23,17,32),
+6 
+],
+[
+ new Date(2013,8,10,23,48,54),
+6 
+],
+[
+ new Date(2013,8,12,20,43,12),
+6 
+],
+[
+ new Date(2013,8,15,15,9,48),
+6 
+],
+[
+ new Date(2013,8,16,15,59,35),
+6 
+],
+[
+ new Date(2013,8,16,16,1,20),
+6 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155426c25336() {
+var data = gvisDataAnnotatedTimeLineID155426c25336();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155426c25336')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155426c25336);
+})();
+function displayChartAnnotatedTimeLineID155426c25336() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155426c25336"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155426c25336"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblSession 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554a039d6 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+2 
+],
+[
+ new Date(2013,7,30,21,36,36),
+2 
+],
+[
+ new Date(2013,7,30,21,41,46),
+2 
+],
+[
+ new Date(2013,7,30,21,43,3),
+2 
+],
+[
+ new Date(2013,7,30,21,45,19),
+2 
+],
+[
+ new Date(2013,7,30,22,18,33),
+2 
+],
+[
+ new Date(2013,7,30,22,19,0),
+2 
+],
+[
+ new Date(2013,7,31,23,17,38),
+2 
+],
+[
+ new Date(2013,8,1,18,17,45),
+2 
+],
+[
+ new Date(2013,8,2,18,18,26),
+2 
+],
+[
+ new Date(2013,8,2,21,24,47),
+2 
+],
+[
+ new Date(2013,8,2,22,9,14),
+2 
+],
+[
+ new Date(2013,8,3,9,32,47),
+2 
+],
+[
+ new Date(2013,8,3,11,10,12),
+2 
+],
+[
+ new Date(2013,8,3,12,9,27),
+2 
+],
+[
+ new Date(2013,8,3,15,29,47),
+2 
+],
+[
+ new Date(2013,8,4,11,40,18),
+2 
+],
+[
+ new Date(2013,8,4,13,44,18),
+2 
+],
+[
+ new Date(2013,8,4,21,14,19),
+2 
+],
+[
+ new Date(2013,8,5,13,44,54),
+2 
+],
+[
+ new Date(2013,8,6,10,11,44),
+2 
+],
+[
+ new Date(2013,8,6,11,30,40),
+2 
+],
+[
+ new Date(2013,8,6,15,43,56),
+2 
+],
+[
+ new Date(2013,8,9,11,31,27),
+2 
+],
+[
+ new Date(2013,8,10,23,17,32),
+2 
+],
+[
+ new Date(2013,8,10,23,48,54),
+2 
+],
+[
+ new Date(2013,8,12,20,43,12),
+2 
+],
+[
+ new Date(2013,8,15,15,9,48),
+2 
+],
+[
+ new Date(2013,8,16,15,59,35),
+2 
+],
+[
+ new Date(2013,8,16,16,1,20),
+2 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554a039d6() {
+var data = gvisDataAnnotatedTimeLineID1554a039d6();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554a039d6')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554a039d6);
+})();
+function displayChartAnnotatedTimeLineID1554a039d6() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554a039d6"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554a039d6"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblTherapist 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID1554463a70a0 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+96 
+],
+[
+ new Date(2013,7,30,21,36,36),
+96 
+],
+[
+ new Date(2013,7,30,21,41,46),
+96 
+],
+[
+ new Date(2013,7,30,21,43,3),
+96 
+],
+[
+ new Date(2013,7,30,21,45,19),
+96 
+],
+[
+ new Date(2013,7,30,22,18,33),
+96 
+],
+[
+ new Date(2013,7,30,22,19,0),
+96 
+],
+[
+ new Date(2013,7,31,23,17,38),
+96 
+],
+[
+ new Date(2013,8,1,18,17,45),
+96 
+],
+[
+ new Date(2013,8,2,18,18,26),
+96 
+],
+[
+ new Date(2013,8,2,21,24,47),
+96 
+],
+[
+ new Date(2013,8,2,22,9,14),
+96 
+],
+[
+ new Date(2013,8,3,9,32,47),
+97 
+],
+[
+ new Date(2013,8,3,11,10,12),
+133 
+],
+[
+ new Date(2013,8,3,12,9,27),
+133 
+],
+[
+ new Date(2013,8,3,15,29,47),
+133 
+],
+[
+ new Date(2013,8,4,11,40,18),
+138 
+],
+[
+ new Date(2013,8,4,13,44,18),
+147 
+],
+[
+ new Date(2013,8,4,21,14,19),
+167 
+],
+[
+ new Date(2013,8,5,13,44,54),
+202 
+],
+[
+ new Date(2013,8,6,10,11,44),
+223 
+],
+[
+ new Date(2013,8,6,11,30,40),
+223 
+],
+[
+ new Date(2013,8,6,15,43,56),
+221 
+],
+[
+ new Date(2013,8,9,11,31,27),
+225 
+],
+[
+ new Date(2013,8,10,23,17,32),
+233 
+],
+[
+ new Date(2013,8,10,23,48,54),
+233 
+],
+[
+ new Date(2013,8,12,20,43,12),
+235 
+],
+[
+ new Date(2013,8,15,15,9,48),
+235 
+],
+[
+ new Date(2013,8,16,15,59,35),
+235 
+],
+[
+ new Date(2013,8,16,16,1,20),
+235 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID1554463a70a0() {
+var data = gvisDataAnnotatedTimeLineID1554463a70a0();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID1554463a70a0')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID1554463a70a0);
+})();
+function displayChartAnnotatedTimeLineID1554463a70a0() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID1554463a70a0"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID1554463a70a0"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblTherapistEval 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15547c503c90 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+0 
+],
+[
+ new Date(2013,7,30,21,36,36),
+0 
+],
+[
+ new Date(2013,7,30,21,41,46),
+0 
+],
+[
+ new Date(2013,7,30,21,43,3),
+0 
+],
+[
+ new Date(2013,7,30,21,45,19),
+0 
+],
+[
+ new Date(2013,7,30,22,18,33),
+0 
+],
+[
+ new Date(2013,7,30,22,19,0),
+0 
+],
+[
+ new Date(2013,7,31,23,17,38),
+0 
+],
+[
+ new Date(2013,8,1,18,17,45),
+0 
+],
+[
+ new Date(2013,8,2,18,18,26),
+0 
+],
+[
+ new Date(2013,8,2,21,24,47),
+0 
+],
+[
+ new Date(2013,8,2,22,9,14),
+0 
+],
+[
+ new Date(2013,8,3,9,32,47),
+0 
+],
+[
+ new Date(2013,8,3,11,10,12),
+0 
+],
+[
+ new Date(2013,8,3,12,9,27),
+0 
+],
+[
+ new Date(2013,8,3,15,29,47),
+0 
+],
+[
+ new Date(2013,8,4,11,40,18),
+0 
+],
+[
+ new Date(2013,8,4,13,44,18),
+0 
+],
+[
+ new Date(2013,8,4,21,14,19),
+0 
+],
+[
+ new Date(2013,8,5,13,44,54),
+0 
+],
+[
+ new Date(2013,8,6,10,11,44),
+0 
+],
+[
+ new Date(2013,8,6,11,30,40),
+0 
+],
+[
+ new Date(2013,8,6,15,43,56),
+0 
+],
+[
+ new Date(2013,8,9,11,31,27),
+0 
+],
+[
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15547c503c90() {
+var data = gvisDataAnnotatedTimeLineID15547c503c90();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15547c503c90')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15547c503c90);
+})();
+function displayChartAnnotatedTimeLineID15547c503c90() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15547c503c90"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15547c503c90"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblTherapistGroupMeeting 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15548c17c36 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+0 
+],
+[
+ new Date(2013,7,30,21,36,36),
+0 
+],
+[
+ new Date(2013,7,30,21,41,46),
+0 
+],
+[
+ new Date(2013,7,30,21,43,3),
+0 
+],
+[
+ new Date(2013,7,30,21,45,19),
+0 
+],
+[
+ new Date(2013,7,30,22,18,33),
+0 
+],
+[
+ new Date(2013,7,30,22,19,0),
+0 
+],
+[
+ new Date(2013,7,31,23,17,38),
+0 
+],
+[
+ new Date(2013,8,1,18,17,45),
+0 
+],
+[
+ new Date(2013,8,2,18,18,26),
+0 
+],
+[
+ new Date(2013,8,2,21,24,47),
+0 
+],
+[
+ new Date(2013,8,2,22,9,14),
+0 
+],
+[
+ new Date(2013,8,3,9,32,47),
+0 
+],
+[
+ new Date(2013,8,3,11,10,12),
+0 
+],
+[
+ new Date(2013,8,3,12,9,27),
+0 
+],
+[
+ new Date(2013,8,3,15,29,47),
+0 
+],
+[
+ new Date(2013,8,4,11,40,18),
+0 
+],
+[
+ new Date(2013,8,4,13,44,18),
+0 
+],
+[
+ new Date(2013,8,4,21,14,19),
+0 
+],
+[
+ new Date(2013,8,5,13,44,54),
+0 
+],
+[
+ new Date(2013,8,6,10,11,44),
+0 
+],
+[
+ new Date(2013,8,6,11,30,40),
+0 
+],
+[
+ new Date(2013,8,6,15,43,56),
+0 
+],
+[
+ new Date(2013,8,9,11,31,27),
+0 
+],
+[
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15548c17c36() {
+var data = gvisDataAnnotatedTimeLineID15548c17c36();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15548c17c36')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15548c17c36);
+})();
+function displayChartAnnotatedTimeLineID15548c17c36() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15548c17c36"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15548c17c36"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblTherapistTraining 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15543409215b () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+155 
+],
+[
+ new Date(2013,7,30,21,36,36),
+155 
+],
+[
+ new Date(2013,7,30,21,41,46),
+155 
+],
+[
+ new Date(2013,7,30,21,43,3),
+155 
+],
+[
+ new Date(2013,7,30,21,45,19),
+155 
+],
+[
+ new Date(2013,7,30,22,18,33),
+155 
+],
+[
+ new Date(2013,7,30,22,19,0),
+155 
+],
+[
+ new Date(2013,7,31,23,17,38),
+155 
+],
+[
+ new Date(2013,8,1,18,17,45),
+155 
+],
+[
+ new Date(2013,8,2,18,18,26),
+155 
+],
+[
+ new Date(2013,8,2,21,24,47),
+155 
+],
+[
+ new Date(2013,8,2,22,9,14),
+155 
+],
+[
+ new Date(2013,8,3,9,32,47),
+157 
+],
+[
+ new Date(2013,8,3,11,10,12),
+213 
+],
+[
+ new Date(2013,8,3,12,9,27),
+213 
+],
+[
+ new Date(2013,8,3,15,29,47),
+213 
+],
+[
+ new Date(2013,8,4,11,40,18),
+221 
+],
+[
+ new Date(2013,8,4,13,44,18),
+222 
+],
+[
+ new Date(2013,8,4,21,14,19),
+256 
+],
+[
+ new Date(2013,8,5,13,44,54),
+311 
+],
+[
+ new Date(2013,8,6,10,11,44),
+339 
+],
+[
+ new Date(2013,8,6,11,30,40),
+341 
+],
+[
+ new Date(2013,8,6,15,43,56),
+337 
+],
+[
+ new Date(2013,8,9,11,31,27),
+341 
+],
+[
+ new Date(2013,8,10,23,17,32),
+344 
+],
+[
+ new Date(2013,8,10,23,48,54),
+344 
+],
+[
+ new Date(2013,8,12,20,43,12),
+344 
+],
+[
+ new Date(2013,8,15,15,9,48),
+344 
+],
+[
+ new Date(2013,8,16,15,59,35),
+344 
+],
+[
+ new Date(2013,8,16,16,1,20),
+344 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15543409215b() {
+var data = gvisDataAnnotatedTimeLineID15543409215b();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15543409215b')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15543409215b);
+})();
+function displayChartAnnotatedTimeLineID15543409215b() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15543409215b"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15543409215b"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblTraining 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID15547be160fb () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+45 
+],
+[
+ new Date(2013,7,30,21,36,36),
+45 
+],
+[
+ new Date(2013,7,30,21,41,46),
+45 
+],
+[
+ new Date(2013,7,30,21,43,3),
+45 
+],
+[
+ new Date(2013,7,30,21,45,19),
+45 
+],
+[
+ new Date(2013,7,30,22,18,33),
+45 
+],
+[
+ new Date(2013,7,30,22,19,0),
+45 
+],
+[
+ new Date(2013,7,31,23,17,38),
+45 
+],
+[
+ new Date(2013,8,1,18,17,45),
+45 
+],
+[
+ new Date(2013,8,2,18,18,26),
+45 
+],
+[
+ new Date(2013,8,2,21,24,47),
+45 
+],
+[
+ new Date(2013,8,2,22,9,14),
+45 
+],
+[
+ new Date(2013,8,3,9,32,47),
+47 
+],
+[
+ new Date(2013,8,3,11,10,12),
+47 
+],
+[
+ new Date(2013,8,3,12,9,27),
+47 
+],
+[
+ new Date(2013,8,3,15,29,47),
+47 
+],
+[
+ new Date(2013,8,4,11,40,18),
+47 
+],
+[
+ new Date(2013,8,4,13,44,18),
+47 
+],
+[
+ new Date(2013,8,4,21,14,19),
+47 
+],
+[
+ new Date(2013,8,5,13,44,54),
+47 
+],
+[
+ new Date(2013,8,6,10,11,44),
+47 
+],
+[
+ new Date(2013,8,6,11,30,40),
+47 
+],
+[
+ new Date(2013,8,6,15,43,56),
+47 
+],
+[
+ new Date(2013,8,9,11,31,27),
+47 
+],
+[
+ new Date(2013,8,10,23,17,32),
+47 
+],
+[
+ new Date(2013,8,10,23,48,54),
+47 
+],
+[
+ new Date(2013,8,12,20,43,12),
+47 
+],
+[
+ new Date(2013,8,15,15,9,48),
+47 
+],
+[
+ new Date(2013,8,16,15,59,35),
+47 
+],
+[
+ new Date(2013,8,16,16,1,20),
+47 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID15547be160fb() {
+var data = gvisDataAnnotatedTimeLineID15547be160fb();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID15547be160fb')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID15547be160fb);
+})();
+function displayChartAnnotatedTimeLineID15547be160fb() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID15547be160fb"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID15547be160fb"
+  style="width: 600px; height: 200px;">
+</div>
+
+#### dbo.tblUclaPtsd 
+<!-- AnnotatedTimeLine generated in R 3.0.1 by googleVis 0.4.5 package -->
+<!-- Mon Sep 16 22:08:49 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotatedTimeLineID155467bb13ed () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2013,7,30,0,30,28),
+0 
+],
+[
+ new Date(2013,7,30,21,36,36),
+0 
+],
+[
+ new Date(2013,7,30,21,41,46),
+0 
+],
+[
+ new Date(2013,7,30,21,43,3),
+0 
+],
+[
+ new Date(2013,7,30,21,45,19),
+0 
+],
+[
+ new Date(2013,7,30,22,18,33),
+0 
+],
+[
+ new Date(2013,7,30,22,19,0),
+0 
+],
+[
+ new Date(2013,7,31,23,17,38),
+0 
+],
+[
+ new Date(2013,8,1,18,17,45),
+0 
+],
+[
+ new Date(2013,8,2,18,18,26),
+0 
+],
+[
+ new Date(2013,8,2,21,24,47),
+0 
+],
+[
+ new Date(2013,8,2,22,9,14),
+0 
+],
+[
+ new Date(2013,8,3,9,32,47),
+0 
+],
+[
+ new Date(2013,8,3,11,10,12),
+0 
+],
+[
+ new Date(2013,8,3,12,9,27),
+0 
+],
+[
+ new Date(2013,8,3,15,29,47),
+0 
+],
+[
+ new Date(2013,8,4,11,40,18),
+0 
+],
+[
+ new Date(2013,8,4,13,44,18),
+0 
+],
+[
+ new Date(2013,8,4,21,14,19),
+0 
+],
+[
+ new Date(2013,8,5,13,44,54),
+0 
+],
+[
+ new Date(2013,8,6,10,11,44),
+0 
+],
+[
+ new Date(2013,8,6,11,30,40),
+0 
+],
+[
+ new Date(2013,8,6,15,43,56),
+0 
+],
+[
+ new Date(2013,8,9,11,31,27),
+0 
+],
+[
+ new Date(2013,8,10,23,17,32),
+0 
+],
+[
+ new Date(2013,8,10,23,48,54),
+0 
+],
+[
+ new Date(2013,8,12,20,43,12),
+0 
+],
+[
+ new Date(2013,8,15,15,9,48),
+0 
+],
+[
+ new Date(2013,8,16,15,59,35),
+0 
+],
+[
+ new Date(2013,8,16,16,1,20),
+0 
+] 
+];
+data.addColumn('datetime','probe_date');
+data.addColumn('number','row_count');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotatedTimeLineID155467bb13ed() {
+var data = gvisDataAnnotatedTimeLineID155467bb13ed();
+var options = {};
+options["width"] =    600;
+options["height"] =    200;
+options["colors"] = ['blue', 'lightblue'];
+options["zoomStartTime"] = new Date(2013,7,30,0,30,28);
+options["zoomEndTime"] = new Date(2013,8,17);
+options["legendPosition"] = "newRow";
+options["scaleType"] = "allmaximized";
+
+    var chart = new google.visualization.AnnotatedTimeLine(
+    document.getElementById('AnnotatedTimeLineID155467bb13ed')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotatedtimeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotatedTimeLineID155467bb13ed);
+})();
+function displayChartAnnotatedTimeLineID155467bb13ed() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotatedTimeLineID155467bb13ed"></script>
+ 
+<!-- divChart -->
+  
+<div id="AnnotatedTimeLineID155467bb13ed"
+  style="width: 600px; height: 200px;">
+</div>
+
+```
+## Error: object 'dsSingle' not found
+```
+
+```
+## starting httpd help server ... done
+```
 

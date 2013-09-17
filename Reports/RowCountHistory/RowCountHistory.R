@@ -7,6 +7,7 @@ require(grid, quietly=TRUE)
 require(plyr, quietly=TRUE)
 require(ggplot2, quietly=TRUE)
 require(scales, quietly=TRUE)
+suppressPackageStartupMessages(require(googleVis))
 # require(xtable, quietly=TRUE) #For formatting LaTeX and HTML tables
 
 ## @knitr DeclareGlobalFunctions
@@ -24,10 +25,10 @@ integer_breaks <- function(n = 5, ...) {
     return( breaks )
   }
 }
-GraphTableHistory <- function( databaseName, tableName ) {
+GraphTableHistoryGG <- function( databaseName, tableName ) {
   dsPlot <- dsLog[dsLog$database==databaseName & dsLog$table==tableName, ]
   
-  ggplot(dsPlot, aes(x=probe_date, y=row_count, label=change, color=sign_plus)) +
+  g <- ggplot(dsPlot, aes(x=probe_date, y=row_count, label=change, color=sign_plus)) +
     #geom_text(vjust=-.5) +
     geom_text(hjust=-.4, vjust=1.2) +
     geom_point() +
@@ -36,6 +37,24 @@ GraphTableHistory <- function( databaseName, tableName ) {
     scale_color_gradient2(low="red", mid="gray70", high="blue", guide=FALSE) +
     theme_bw() + 
     labs(title=tableName, x="Probe Date", y="Row Count in Table")
+  print(g)
+}
+GraphTableHistoryGV <- function( databaseName, tableName ) {
+  dsPlot <- dsLog[dsLog$database==databaseName & dsLog$table==tableName, ]
+  optionsList <- list(
+      colors="['blue', 'lightblue']",
+      zoomStartTime=min(dsPlot$probe_date),
+      zoomEndTime=as.Date(Sys.time() ),
+      legendPosition='newRow',
+      width=600, height=200, #scaleColumns='[0,1]',
+      scaleType='allmaximized')
+  
+  cat("\n####", tableName,"\n")
+  g <- gvisAnnotatedTimeLine(dsPlot, datevar="probe_date",
+                        numvar="row_count",# idvar="Type",
+                        options=optionsList)
+  googleVis:::print.gvis(g, tag="chart")
+                        
 }
 ## @knitr LoadDS
 ############################
@@ -96,10 +115,27 @@ dsLogLast
 for( databaseName in sort(unique(dsLog$database)) ) {
   cat("\n##", databaseName, " database graphs\n")
   for( tableName in sort(unique(dsLog[dsLog$database==databaseName, 'table'])) ) {
-    g <- GraphTableHistory(databaseName, tableName)
-    print(g)
+#     GraphTableHistoryGG(databaseName, tableName)
+    GraphTableHistoryGV(databaseName, tableName)
   }
 }
 # GraphTableHistory("Tfcbt", "dbo.tblPresenter")
 # GraphTableHistory("Tfcbt", "dbo.tblLUGender")
 # GraphTableHistory("Tfcbt", "dbo.tblTherapist")
+dsSingle$probe_date
+dsSingle <- dsLog[dsLog$database=="Tfcbt" & dsLog$table=="dbo.tblTherapist", ]
+# dsSingle$probe_date <- as.Date(dsSingle$probe_date)
+
+g <- gvisAnnotatedTimeLine(dsSingle, datevar="probe_date",
+                           numvar="row_count",# idvar="Type",
+                            
+                           options=list(
+                             colors="['blue', 'lightblue']",
+                             zoomStartTime=min(dsSingle$probe_date),
+                             zoomEndTime=as.Date(Sys.time() ),
+                             legendPosition='newRow',
+                             width=600, height=200, #scaleColumns='[0,1]',
+                             scaleType='allmaximized')
+)
+
+plot(g)
