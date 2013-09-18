@@ -7,6 +7,7 @@ require(grid, quietly=TRUE)
 require(plyr, quietly=TRUE)
 require(ggplot2, quietly=TRUE)
 require(scales, quietly=TRUE)
+require(lubridate, quietly=TRUE)
 suppressPackageStartupMessages(require(googleVis))
 # require(xtable, quietly=TRUE) #For formatting LaTeX and HTML tables
 
@@ -79,13 +80,25 @@ rm(pathDirectoryCode)
 
 ## @knitr TweakDS
 ############################
-dsLog <- plyr::ddply(dsLog, c("database", "table"), transform, 
-                     change_plus=c(NA, diff(row_count)), 
-                     change_minus=c(diff(row_count), NA), 
-                     time_gap_in_seconds=c(NA, diff(probe_date))
-                     )
-
-dsLog$time_gap_in_hours <- dsLog$time_gap_in_seconds/(60*60)
+SummarizeTableRecords <- function( df ) {
+  print(df$table)
+  print(df$probe_date)
+  print(diff(df$probe_date))
+  
+  df <- df[order(df$probe_date), ]
+  df$change_plus=c(NA, diff(df$row_count)) 
+  df$change_minus=c(diff(df$row_count), NA)
+  #df$time_gap_in_seconds=c(NA, diff(df$probe_date)) #This way doesn't guarantee what the differences will be (eg, seconds, minutes, days, etc)
+  df$time_gap_in_hours=c(NA, lubridate::int_length(lubridate::int_diff(df$probe_date))/(60*60))
+  return( df )  
+}
+dsLog <- plyr::ddply(dsLog, c("database", "table"), SummarizeTableRecords) 
+                     
+# dsLog <- plyr::ddply(dsLog, c("database", "table"), transform, 
+#                      change_plus=c(NA, diff(row_count)), 
+#                      change_minus=c(diff(row_count), NA), 
+#                      time_gap_in_seconds=c(NA, diff(probe_date))
+#                      )
 
 dsLog$change_pretty <- scales::comma(dsLog$change_plus)
 dsLog$change_pretty <- ifelse(dsLog$change_plus>0, paste0("+", dsLog$change_pretty), dsLog$change_pretty)
@@ -101,7 +114,6 @@ dsLogLast$change_plus <- NULL
 dsLogLast$change_minus <- NULL
 dsLogLast$sign_plus <- NULL
 dsLogLast$sign_minus <- NULL
-dsLogLast$time_gap_in_seconds <- NULL
 dsLog <- plyr::rename(dsLog, replace=c("change_pretty"="change"))
 
 dsLogLast <- dsLogLast[order(dsLogLast$database, dsLogLast$table), ]
