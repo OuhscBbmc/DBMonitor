@@ -141,9 +141,8 @@ rawCsvText <- RCurl::postForm(
   .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 # head(rawCsvText) #Inspect the raw data, if desired.
-dsLog <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
-object.size(dsLog)
+dsLogDoubleCheck <- read.csv(text=rawCsvText, stringsAsFactors=FALSE) #Convert the raw text to a dataset.
+object.size(dsLogDoubleCheck)
 
-rm(dsLog, rawCsvText, redcapUri)
-
+rm(dsLogDoubleCheck, rawCsvText, redcapUri)
 rm(tokenLog)

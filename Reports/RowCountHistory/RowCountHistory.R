@@ -115,27 +115,27 @@ dsLogLast
 for( databaseName in sort(unique(dsLog$database)) ) {
   cat("\n##", databaseName, " database graphs\n")
   for( tableName in sort(unique(dsLog[dsLog$database==databaseName, 'table'])) ) {
-#     GraphTableHistoryGG(databaseName, tableName)
-    GraphTableHistoryGV(databaseName, tableName)
+    GraphTableHistoryGG(databaseName, tableName)
+#     GraphTableHistoryGV(databaseName, tableName)
   }
 }
 # GraphTableHistory("Tfcbt", "dbo.tblPresenter")
 # GraphTableHistory("Tfcbt", "dbo.tblLUGender")
 # GraphTableHistory("Tfcbt", "dbo.tblTherapist")
-dsSingle$probe_date
-dsSingle <- dsLog[dsLog$database=="Tfcbt" & dsLog$table=="dbo.tblTherapist", ]
-# dsSingle$probe_date <- as.Date(dsSingle$probe_date)
-
-g <- gvisAnnotatedTimeLine(dsSingle, datevar="probe_date",
-                           numvar="row_count",# idvar="Type",
-                            
-                           options=list(
-                             colors="['blue', 'lightblue']",
-                             zoomStartTime=min(dsSingle$probe_date),
-                             zoomEndTime=as.Date(Sys.time() ),
-                             legendPosition='newRow',
-                             width=600, height=200, #scaleColumns='[0,1]',
-                             scaleType='allmaximized')
-)
-
-plot(g)
+# dsSingle$probe_date
+# dsSingle <- dsLog[dsLog$database=="Tfcbt" & dsLog$table=="dbo.tblTherapist", ]
+# # dsSingle$probe_date <- as.Date(dsSingle$probe_date)
+# 
+# g <- gvisAnnotatedTimeLine(dsSingle, datevar="probe_date",
+#                            numvar="row_count",# idvar="Type",
+#                             
+#                            options=list(
+#                              colors="['blue', 'lightblue']",
+#                              zoomStartTime=min(dsSingle$probe_date),
+#                              zoomEndTime=as.Date(Sys.time() ),
+#                              legendPosition='newRow',
+#                              width=600, height=200, #scaleColumns='[0,1]',
+#                              scaleType='allmaximized')
+# )
+# 
+# plot(g)
