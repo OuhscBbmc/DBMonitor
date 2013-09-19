@@ -9,7 +9,8 @@ opts_knit$set(root.dir='../../')  #Don't combine this call with any other chunk 
 <!-- Point knitr to the underlying code file so it knows where to look for the chunks. -->
 ```{r, echo=FALSE, message=F}
 # getwd()
-opts_chunk$set(fig.width=12, 
+opts_chunk$set(comment="",
+               fig.width=12, 
                fig.height=3, 
                fig.path='FigureRmd/'
                )#, dpi=400)

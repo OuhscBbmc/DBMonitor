@@ -29,7 +29,7 @@ integer_breaks <- function(n = 5, ...) {
 GraphTableHistoryGG <- function( databaseName, tableName ) {
   dsPlot <- dsLog[dsLog$database==databaseName & dsLog$table==tableName, ]
   
-  g <- ggplot(dsPlot, aes(x=probe_date, y=row_count, label=change, color=sign_plus)) +
+  g <- ggplot(dsPlot, aes(x=probe_date, y=row_count, label=change_pretty, color=sign_plus)) +
     #geom_text(vjust=-.5) +
     geom_text(hjust=-.4, vjust=1.2) +
     geom_point() +
@@ -81,9 +81,9 @@ rm(pathDirectoryCode)
 ## @knitr TweakDS
 ############################
 SummarizeTableRecords <- function( df ) {
-  print(df$table)
-  print(df$probe_date)
-  print(diff(df$probe_date))
+#   print(df$table)
+#   print(df$probe_date)
+#   print(diff(df$probe_date))
   
   df <- df[order(df$probe_date), ]
   df$change_plus=c(NA, diff(df$row_count)) 
@@ -100,6 +100,7 @@ dsLog <- plyr::ddply(dsLog, c("database", "table"), SummarizeTableRecords)
 #                      time_gap_in_seconds=c(NA, diff(probe_date))
 #                      )
 
+dsLog$row_count_pretty <- scales::comma(dsLog$row_count)
 dsLog$change_pretty <- scales::comma(dsLog$change_plus)
 dsLog$change_pretty <- ifelse(dsLog$change_plus>0, paste0("+", dsLog$change_pretty), dsLog$change_pretty)
 dsLog$change_pretty <- ifelse(is.na(dsLog$change_pretty), "", dsLog$change_pretty)
@@ -110,11 +111,15 @@ dsLog$sign_minus <- sign(dsLog$change_minus)
 dsLogLast <- plyr::ddply(dsLog, .variables=c("database", "table"), subset, probe_date==max(probe_date))
 # colnames(dsLogLast)
 dsLogLast$record_id <- NULL
+dsLogLast$row_count <- NULL
 dsLogLast$change_plus <- NULL
 dsLogLast$change_minus <- NULL
 dsLogLast$sign_plus <- NULL
 dsLogLast$sign_minus <- NULL
-dsLog <- plyr::rename(dsLog, replace=c("change_pretty"="change"))
+dsLogLast <- plyr::rename(dsLogLast, replace=c(
+  "change_pretty"="change",
+  "row_count_pretty"="row_count"
+  ))
 
 dsLogLast <- dsLogLast[order(dsLogLast$database, dsLogLast$table), ]
 
