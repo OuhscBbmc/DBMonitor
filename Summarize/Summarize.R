@@ -125,7 +125,8 @@ recordsAffected <- RCurl::postForm(
   type='flat', 
   overwriteBehavior='normal', #overwriteBehavior: *normal* - blank/empty values will be ignored [default]; *overwrite* - blank/empty values are valid and will overwrite data
   data=csv,
-  .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
+      .opts=curlOptions(ssl.verifypeer=FALSE)
+#   .opts=curlOptions(cainfo="./Dal/Certs/ca-bundle.crt")
 )
 message(paste("Count of records (ie, database tables being monitored) written & updated to REDCap:", as.integer(recordsAffected)))
 rm(csv, recordsAffected)
