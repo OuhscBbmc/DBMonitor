@@ -28,8 +28,8 @@
 
 
 ```
-This report covers records between 2013-08-30 00:30:28 and 2013-10-29 16:08:20.
-This report contains information from 2 databases, 34 tables, and 1,044 records.
+This report covers records between 2013-08-30 00:30:28 and 2013-12-17 15:03:12.
+This report contains information from 2 databases, 34 tables, and 1,248 records.
 ```
 
 
@@ -41,40 +41,40 @@ Below the table are line graphs that show the history of each database table.  T
 
 ```
    database                        table          probe_date time_gap_in_hours row_count change
-1    Autism            dbo.AEPS ADAPTIVE 2013-10-29 16:08:20             194.4         0      0
-2    Autism           dbo.AEPS COGNITIVE 2013-10-29 16:08:20             194.4         0      0
-3    Autism           dbo.AEPS FINEMOTOR 2013-10-29 16:08:20             194.4         0      0
-4    Autism          dbo.AEPS GROSSMOTOR 2013-10-29 16:08:20             194.4         0      0
-5    Autism              dbo.AEPS SOCIAL 2013-10-29 16:08:20             194.4         0      0
-6    Autism          dbo.AEPS SOCIALCOMM 2013-10-29 16:08:20             194.4         0      0
-7    Autism             dbo.Demographics 2013-10-29 16:08:20             194.4        20     +1
-8    Autism         dbo.Demographics old 2013-10-29 16:08:20             194.4         7      0
-9    Autism              dbo.EFdatasheet 2013-10-29 16:08:20             194.4    16,562   +248
-10   Autism                   dbo.Mullen 2013-10-29 16:08:20             194.4         0      0
-11   Autism      dbo.Satisfaction_Survey 2013-10-29 16:08:20             194.4         0      0
-12   Autism          dbo.SkillsChecklist 2013-10-29 16:08:20             194.4         0      0
-13   Autism                   dbo.tblABC 2013-10-29 16:08:20             194.4         5      0
-14   Autism      dbo.Treatment Questions 2013-10-29 16:08:20             194.4         0      0
-15   Autism                 dbo.Vineland 2013-10-29 16:08:20             194.4         0      0
-16   Autism                dbo.Vineland2 2013-10-29 16:08:20             194.4         0      0
-17    Tfcbt                dbo.tblAgency 2013-10-29 16:08:20             194.4        89      0
-18    Tfcbt        dbo.tblAgencyLocation 2013-10-29 16:08:20             194.4       206      0
-19    Tfcbt             dbo.tblCallGroup 2013-10-29 16:08:20             194.4        29      0
-20    Tfcbt      dbo.tblCallGroupMeeting 2013-10-29 16:08:20             194.4       169      0
-21    Tfcbt                  dbo.tblEval 2013-10-29 16:08:20             194.4         0      0
-22    Tfcbt  dbo.tblImplementationSurvey 2013-10-29 16:08:20             194.4         0      0
-23    Tfcbt             dbo.tblLUDecided 2013-10-29 16:08:20             194.4         3      0
-24    Tfcbt              dbo.tblLUGender 2013-10-29 16:08:20             194.4         3      0
-25    Tfcbt              dbo.tblLUSource 2013-10-29 16:08:20             194.4         5      0
-26    Tfcbt        dbo.tblLUTrainingType 2013-10-29 16:08:20             194.4        10      0
-27    Tfcbt             dbo.tblPresenter 2013-10-29 16:08:20             194.4         6      0
-28    Tfcbt               dbo.tblSession 2013-10-29 16:08:20             194.4         2      0
-29    Tfcbt             dbo.tblTherapist 2013-10-29 16:08:20             194.4       530    +51
-30    Tfcbt         dbo.tblTherapistEval 2013-10-29 16:08:20             194.4         0      0
-31    Tfcbt dbo.tblTherapistGroupMeeting 2013-10-29 16:08:20             194.4         0      0
-32    Tfcbt     dbo.tblTherapistTraining 2013-10-29 16:08:20             194.4       797    +79
-33    Tfcbt              dbo.tblTraining 2013-10-29 16:08:20             194.4        55     +1
-34    Tfcbt              dbo.tblUclaPtsd 2013-10-29 16:08:20             194.4         0      0
+1    Autism            dbo.AEPS ADAPTIVE 2013-12-17 15:03:12             339.3         0      0
+2    Autism           dbo.AEPS COGNITIVE 2013-12-17 15:03:12             339.3         0      0
+3    Autism           dbo.AEPS FINEMOTOR 2013-12-17 15:03:12             339.3         0      0
+4    Autism          dbo.AEPS GROSSMOTOR 2013-12-17 15:03:12             339.3         0      0
+5    Autism              dbo.AEPS SOCIAL 2013-12-17 15:03:12             339.3         0      0
+6    Autism          dbo.AEPS SOCIALCOMM 2013-12-17 15:03:12             339.3         0      0
+7    Autism             dbo.Demographics 2013-12-17 15:03:12             339.3        20      0
+8    Autism         dbo.Demographics old 2013-12-17 15:03:12             339.3         7      0
+9    Autism              dbo.EFdatasheet 2013-12-17 15:03:12             339.3    17,070    +56
+10   Autism                   dbo.Mullen 2013-12-17 15:03:12             339.3         0      0
+11   Autism      dbo.Satisfaction_Survey 2013-12-17 15:03:12             339.3         0      0
+12   Autism          dbo.SkillsChecklist 2013-12-17 15:03:12             339.3         0      0
+13   Autism                   dbo.tblABC 2013-12-17 15:03:12             339.3         5      0
+14   Autism      dbo.Treatment Questions 2013-12-17 15:03:12             339.3         0      0
+15   Autism                 dbo.Vineland 2013-12-17 15:03:12             339.3         0      0
+16   Autism                dbo.Vineland2 2013-12-17 15:03:12             339.3         0      0
+17    Tfcbt                dbo.tblAgency 2013-12-17 15:03:12             339.3       112     +1
+18    Tfcbt        dbo.tblAgencyLocation 2013-12-17 15:03:12             339.3       234     +1
+19    Tfcbt             dbo.tblCallGroup 2013-12-17 15:03:12             339.3        35      0
+20    Tfcbt      dbo.tblCallGroupMeeting 2013-12-17 15:03:12             339.3       169      0
+21    Tfcbt                  dbo.tblEval 2013-12-17 15:03:12             339.3         0      0
+22    Tfcbt  dbo.tblImplementationSurvey 2013-12-17 15:03:12             339.3         0      0
+23    Tfcbt             dbo.tblLUDecided 2013-12-17 15:03:12             339.3         3      0
+24    Tfcbt              dbo.tblLUGender 2013-12-17 15:03:12             339.3         3      0
+25    Tfcbt              dbo.tblLUSource 2013-12-17 15:03:12             339.3         5      0
+26    Tfcbt        dbo.tblLUTrainingType 2013-12-17 15:03:12             339.3        10      0
+27    Tfcbt             dbo.tblPresenter 2013-12-17 15:03:12             339.3         6      0
+28    Tfcbt               dbo.tblSession 2013-12-17 15:03:12             339.3         2      0
+29    Tfcbt             dbo.tblTherapist 2013-12-17 15:03:12             339.3       712     -1
+30    Tfcbt         dbo.tblTherapistEval 2013-12-17 15:03:12             339.3         0      0
+31    Tfcbt dbo.tblTherapistGroupMeeting 2013-12-17 15:03:12             339.3         0      0
+32    Tfcbt     dbo.tblTherapistTraining 2013-12-17 15:03:12             339.3     1,201     +9
+33    Tfcbt              dbo.tblTraining 2013-12-17 15:03:12             339.3        59     +1
+34    Tfcbt              dbo.tblUclaPtsd 2013-12-17 15:03:12             339.3         0      0
 ```
 
 
