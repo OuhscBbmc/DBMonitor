@@ -1,6 +1,6 @@
 rm(list=ls(all=TRUE))  #Clear the variables from previous runs.  UNcomment this only during testing, or else it will wipe out the calling code's memory.
 require(RCurl, quietly=TRUE)
-require(plyr, quietly=TRUE)
+# require(plyr, quietly=TRUE)
 # require(reshape2, quietly=TRUE)
 # require(lubridate, quietly=TRUE)
 # require(stringr, quietly=TRUE)
